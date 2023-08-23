@@ -5,10 +5,14 @@ const cors = require("cors");
 const fs = require("fs");
 const axios = require("axios");
 
+// zoho access token 
+const {getAccessToken} =  require("./accessToken");
+let access_token = ""
+
 require('dotenv').config();
 const PORT = process.env.PORT;
 
-app.use(express.json());
+app.use(express.json()); 
 app.use(fileUpload());
 app.use(cors("*"));
 
@@ -20,12 +24,27 @@ app.get("/", (req, res) => {
     });
 })
 
+// Obtains Zoho access token
+const getZohoAccessToken = async () => {
+    try {
+      access_token = await getAccessToken();
+      console.log("access token", access_token);
+      console.log("successfully generated access token");
+    }
+    catch (err) {
+      console.log("error while generating access Token");
+    }
+  }
+
 app.post("/uploadFile/:fileId", async (req, res) => {
     const { fileId } = req.params;
     console.log("file ID is -->", fileId);
+    let data;
 
-    let access_token = "1000.8ba04e85ff3b4916decd320bc9a719f4.e2141085764fe7ca0db4dffe3d536ab9";
+    await getZohoAccessToken();
 
+    console.log("atsss", access_token);
+    
     const config = {
         method: 'GET',
         url: `https://download.zoho.com/v1/workdrive/download/${fileId}`,
@@ -35,11 +54,10 @@ app.post("/uploadFile/:fileId", async (req, res) => {
           },
     }
 
-    let data;
     try{
         const response = await axios(config);
         data = await response.data;
-        console.log("file Data -->", data)
+        console.log("file Data -->", data);
     }
     catch(err){
         console.log("Error while downloading file");
