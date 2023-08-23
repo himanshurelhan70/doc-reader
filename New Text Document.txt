@@ -1,0 +1,103 @@
+void demo()
+{
+// //////////////// step 1 - get all files present in "General" Folder
+header = Map();
+header.put("Accept","application/vnd.api+json");
+response = invokeurl
+[
+	url :"https://www.zohoapis.com/workdrive/api/v1/files/soa29a0259a59068045c3896444d55f291e8d/files"
+	type :GET
+	headers:header
+	connection:"wd"
+];
+info "response1 - " + response;
+// get the id of latest file
+id = response.getJSON("data").get(0).getJSON("id");
+info "id of latest file - " + id;
+// 
+// 
+// 
+// ////////////////////////  setp 2 - get Download Url of a specific file by it's id
+header2 = Map();
+header2.put("Accept","application/vnd.api+json");
+response2 = invokeurl
+[
+	url :"https://www.zohoapis.com/workdrive/api/v1/files/" + id
+	type :GET
+	headers:header2
+	connection:"wd"
+];
+download_url = response2.getJSON("data").getJSON("attributes").getJSON("download_url");
+info "download_url of latest file - " + download_url;
+// 
+// 
+// 
+// ////////////////////// step 3 - Read File content using download url
+header3 = Map();
+header3.put("Accept","application/vnd.api+json");
+fileData = invokeurl
+[
+	url :download_url
+	type :GET
+	headers:header3
+	connection:"wd"
+];
+info "fileData of latest file  - " + fileData;
+// 
+// 
+// ///////////////////////// step 4 -  Filter the Data
+// Find the position of "A-" and "B-"
+startIndex = fileData.indexOf("A-");
+endIndex = fileData.indexOf("B-");
+// Extract the content between "A-" and "B-"
+AContent = subString(fileData,startIndex + 2,endIndex);
+info "AContent - " + AContent;
+// 
+// Find the position of "B-" and "C-"
+startIndex = fileData.indexOf("B-TTP/ITR-EML-");
+endIndex = fileData.indexOf("C-");
+BContent = subString(fileData,startIndex + 2,endIndex);
+info "BContent - " + BContent;
+// 
+// Find the position of "C-" and "D-"
+startIndex = fileData.indexOf("C-");
+endIndex = fileData.indexOf("D-");
+CContent = subString(fileData,startIndex + 2,endIndex);
+info "CContent - " + CContent;
+// 
+// Find the position of "D-" and "G-"
+startIndex = fileData.indexOf("D-");
+endIndex = fileData.indexOf("G-");
+DContent = subString(fileData,startIndex + 2,endIndex);
+info "DContent - " + DContent;
+// 
+// Find the position of "H-" and "K-"
+startIndex = fileData.indexOf("H-");
+endIndex = fileData.indexOf("H-004");
+HContent = subString(fileData,startIndex + 2,endIndex);
+info "HContent - " + HContent;
+// 
+// Find the position of "I-" and "T-"
+startIndex = fileData.lastIndexOf("I-");
+endIndex = fileData.indexOf("MR;;");
+IContent = subString(fileData,startIndex + 8,endIndex);
+info "IContent - " + IContent;
+// IContent = "001;01ALAM/IRSHAD MR";
+// 
+// 
+// 
+// Push Data into ZOHO CRM
+newData = Map();
+newData.put("Name",AContent);
+newData.put("B",BContent);
+newData.put("C",CContent);
+newData.put("D",DContent);
+newData.put("H",HContent);
+newData.put("I",IContent);
+Airtickets = zoho.crm.createRecord("Airtickets",newData,{"trigger":{"workflow"}});
+info Airtickets;
+// 	
+// 	
+// 	
+// 	
+}

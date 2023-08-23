@@ -3,6 +3,7 @@ const app = express();
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
 const fs = require("fs");
+const axios = require("axios");
 
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -19,27 +20,63 @@ app.get("/", (req, res) => {
     });
 })
 
-app.post("/readFile", (req, res) => {
-    const { name } = req.body;
-    const { file } = req.files;
+app.post("/uploadFile/:fileId", async (req, res) => {
+    const { fileId } = req.params;
+    console.log("file ID is -->", fileId);
 
-    console.log(name);
+    let access_token = "1000.110eeb6d007d0178312a11c472916116.8a661ec33c210b69a717a00310ab2fe9";
 
-    file.mv("temp", () => {
-        console.log('file saved to server successfully');
-    });
-
-    try {
-        const data = fs.readFileSync("temp", 'utf8');
-        console.log(data);
-    }
-    catch (error) {
-        console.log("error while reading file");
-        console.log(error);
+    const config = {
+        method: 'GET',
+        url: `https://download.zoho.com/v1/workdrive/download/${fileId}`,
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${access_token}`,
+          },
     }
 
-    res.json({
-        success: true
+    try{
+        const response = await axios(config);
+        const data = await response.data;
+        console.log("file Data -->", data)
+    }
+    catch(err){
+        console.log("Error while downloading file");
+        console.log(err);
+        return res.status(400).json({
+            success: false,
+            message: "Error while downloading file"
+        })
+    }
+
+
+    // saving file to server
+    // try {
+    //     file.mv("temp", () => {
+    //         console.log('file saved to server successfully');
+    //     });
+    // }
+    // catch (error) {
+    //     console.log("Error while saving file to server");
+    //     return res.status(500).json({
+    //         success: false,
+    //         message: "Error while saving file to server"
+    //     });
+    // }
+
+    // reading file
+    // try {
+    //     const data = fs.readFileSync("temp", 'utf8');
+    //     console.log(data);
+    // }
+    // catch (error) {
+    //     console.log("error while reading file");
+    //     console.log(error);
+    // }
+
+    res.status(200).json({
+        success: true,
+        message: "Data pushed to CRM successfully"
     });
 })
 
