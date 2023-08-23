@@ -24,7 +24,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
     const { fileId } = req.params;
     console.log("file ID is -->", fileId);
 
-    let access_token = "1000.110eeb6d007d0178312a11c472916116.8a661ec33c210b69a717a00310ab2fe9";
+    let access_token = "1000.8ba04e85ff3b4916decd320bc9a719f4.e2141085764fe7ca0db4dffe3d536ab9";
 
     const config = {
         method: 'GET',
@@ -35,9 +35,10 @@ app.post("/uploadFile/:fileId", async (req, res) => {
           },
     }
 
+    let data;
     try{
         const response = await axios(config);
-        const data = await response.data;
+        data = await response.data;
         console.log("file Data -->", data)
     }
     catch(err){
@@ -49,34 +50,56 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         })
     }
 
+    // Find the position of "A-" and "B-"
+    startIndex = data.indexOf("A-");
+    endIndex = data.indexOf("B-");
+    // Extract the content between "A-" and "B-"
+    AContent = data.substring(startIndex + 2,endIndex);
+    console.log("AContent - " + AContent);
+    
+    // Find the position of "B-" and "C-"
+    startIndex = data.indexOf("B-TTP/ITR-EML-");
+    endIndex = data.indexOf("C-");
+    BContent = data.substring(startIndex + 2,endIndex);
+    console.log("BContent - " + BContent);
 
-    // saving file to server
-    // try {
-    //     file.mv("temp", () => {
-    //         console.log('file saved to server successfully');
-    //     });
-    // }
-    // catch (error) {
-    //     console.log("Error while saving file to server");
-    //     return res.status(500).json({
-    //         success: false,
-    //         message: "Error while saving file to server"
-    //     });
-    // }
+    // Find the position of "C-" and "D-"
+    startIndex = data.indexOf("C-");
+    endIndex = data.indexOf("D-");
+    CContent = data.substring(startIndex + 2,endIndex);
+    console.log("CContent - " + CContent);
+    
+    // Find the position of "D-" and "G-"
+    startIndex = data.indexOf("D-");
+    endIndex = data.indexOf("G-");
+    DContent = data.substring(startIndex + 2,endIndex);
+    console.log("DContent - " + DContent);
+    
+    // Find the position of "H-" and "K-"
+    startIndex = data.indexOf("H-");
+    endIndex = data.indexOf("H-004");
+    HContent = data.substring(startIndex + 2,endIndex);
+    console.log("HContent - " + HContent);
+    
 
-    // reading file
-    // try {
-    //     const data = fs.readFileSync("temp", 'utf8');
-    //     console.log(data);
-    // }
-    // catch (error) {
-    //     console.log("error while reading file");
-    //     console.log(error);
-    // }
+    // Find the position of "I-" and "T-"
+    startIndex = data.lastIndexOf("I-");
+    endIndex = data.indexOf("MR;;");
+    IContent = data.substring(startIndex + 2,endIndex);
+    console.log("IContent - " + IContent);
+    
 
     res.status(200).json({
         success: true,
-        message: "Data pushed to CRM successfully"
+        message: "Data pushed to CRM successfully",
+        data: {
+            A: AContent,
+            B: BContent,
+            C: CContent,
+            D: DContent,
+            H: HContent,
+            I: IContent
+        }
     });
 })
 
