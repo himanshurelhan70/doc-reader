@@ -7,7 +7,7 @@ const axios = require("axios");
 
 // zoho access token 
 const {getAccessToken} =  require("./accessToken");
-let access_token = ""
+let access_token = "";
 
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -94,11 +94,28 @@ app.post("/uploadFile/:fileId", async (req, res) => {
     console.log("DContent - " + DContent);
     
     // Find the position of "H-" and "K-"
-    startIndex = data.indexOf("H-");
-    endIndex = data.indexOf("H-004");
+    startIndex = data.indexOf("H-001");
+    endIndex = data.indexOf("Y-001");
     HContent = data.substring(startIndex + 2,endIndex);
     console.log("HContent - " + HContent);
+
+    // H-006
+    startIndex = data.indexOf("H-006");
+    endIndex = data.indexOf("H-001");
+    h6 = data.substring(startIndex + 2,endIndex);
+    console.log("h6 - " + h6);
+
+    // H-007
+    startIndex = data.indexOf("H-007");
+    endIndex = data.indexOf("Y-007");
+    h7 = data.substring(startIndex + 2,endIndex);
+    console.log("h7 - " + h7);
     
+    // H-008
+    startIndex = data.indexOf("H-008");
+    endIndex = data.indexOf("K-");
+    h8 = data.substring(startIndex + 2,endIndex);
+    console.log("h8 - " + h8);
 
     // Find the position of "I-" and "T-"
     startIndex = data.lastIndexOf("I-");
@@ -116,10 +133,13 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             C: CContent,
             D: DContent,
             H: HContent,
-            I: IContent
+            I: IContent,
+            h6: h6,
+            h7: h7,
+            h8: h8
         }
     });
-})
+});
 
 app.listen(PORT, () => {
     console.log('server is running');
