@@ -138,7 +138,20 @@ app.post("/uploadFile/:fileId", async (req, res) => {
     if (matches.length > 0) {
         // Get the second matched group and store in an array
         const hLines = matches.map(match => match[2].trim()); 
-        recordDetails.H = hLines;
+
+        const H = [];
+
+        hLines.forEach(element => {
+            const hData = {
+                h1: "aaaa",
+                h2: "bbbb",
+                h3: "cccc"
+            }
+
+            H.push(hData);
+        });
+
+        recordDetails.H = H;
     } else {
         console.log("No matches found.");
     }
