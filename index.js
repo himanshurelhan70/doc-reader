@@ -142,10 +142,15 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const H = [];
 
         hLines.forEach(element => {
+
+            hArr = element.split(";");
+
             const hData = {
-                h1: "aaaa",
-                h2: "bbbb",
-                h3: "cccc"
+                h1: hArr[0].trim(),
+                h2: hArr[1].trim(),
+                h3: hArr[2].trim(),
+                h4: hArr[3].trim(),
+                h5: hArr[4].trim(),
             }
 
             H.push(hData);
