@@ -113,11 +113,29 @@ app.post("/uploadFile/:fileId", async (req, res) => {
     const GX = data.substring(gx_start + 3, gx_end);
     console.log("GX -----> " + GX);
 
-    // "I-"
+    // I-
     const i_start = data.lastIndexOf("I-");
     const i_end = data.indexOf("\n", i_start);
     const I = data.substring(i_start + 3, i_end);
     console.log("I -----> " + I);
+
+    // T -
+    const t_start = data.lastIndexOf("T-");
+    const t_end = data.indexOf("\n", t_start);
+    const T = data.substring(t_start + 3, t_end);
+    console.log("T-----> " + T);
+
+    // O -
+    const o_start = data.lastIndexOf("O-");
+    const o_end = data.indexOf("\n", o_start);
+    const O = data.substring(o_start + 3, o_end);
+    console.log("O-----> " + O);
+           
+    // N-NUC
+    const NUC_start = data.lastIndexOf("O-");
+    const NUC_end = data.indexOf("\n", NUC_start);
+    const NUC = data.substring(NUC_start + 3, NUC_end);
+    console.log("NUC-----> " + NUC);
        
 
     let recordDetails = {
@@ -126,7 +144,10 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         C: C,
         D: D,
         GX: GX,
-        I: I
+        I: I,
+        T: T,
+        O: O,
+        NUC : NUC
     };
 
     // H-
