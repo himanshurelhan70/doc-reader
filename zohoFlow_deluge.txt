@@ -18,6 +18,9 @@ C = data.getJSON("C");
 D = data.getJSON("D");
 GX = data.getJSON("GX");
 I = data.getJSON("I");
+T = data.getJSON("T");
+O = data.getJSON("O");
+NUC = data.getJSON("NUC");
 // 
 //
 // Adding all the extracted value to a map()
@@ -29,11 +32,14 @@ newData.put("C",C);
 newData.put("D",D);
 newData.put("GX",GX);
 newData.put("I",I);
+newData.put("T",T);
+newData.put("O",O);
+newData.put("NUC",NUC);
 //////////////////
 //// Adding values in a List for a subform
 subForm = List();
 H = data.getJSON("H");
-info "H ----> " + H;
+// info "H ----> " + H;
 for each  item in H
 {
 	subFormData = Map();
@@ -52,6 +58,7 @@ for each  item in H
 //////////////
 newData.put("Subform_1",subForm);
 //// creating a new record
+info "newData ----->" + newData;
 Airtickets = zoho.crm.createRecord("Airtickets",newData,{"trigger":{"workflow"}});
 info Airtickets;
 }
