@@ -12,29 +12,26 @@ info "FileData --> " + response;
 // 
 // extracting values from data
 data = response.getJSON("data");
-A = data.getJSON("A");
-B = data.getJSON("B");
-C = data.getJSON("C");
-D = data.getJSON("D");
-GX = data.getJSON("GX");
-I = data.getJSON("I");
-T = data.getJSON("T");
-O = data.getJSON("O");
-NUC = data.getJSON("NUC");
+Passenger = data.getJSON("Passenger");
+Ticket_Number = data.getJSON("Ticket_Number");
+Airline = data.getJSON("Airline");
+Flight_Description = data.getJSON("Flight_Description");
+Fair = data.getJSON("Fair");
+TAX = data.getJSON("TAX");
+Total_Tax = data.getJSON("Total_Tax").toString();
+H = data.getJSON("H");
 // 
 //
 // Adding all the extracted value to a map()
 newData = Map();
-newData.put("Name",A);
-newData.put("A",A);
-newData.put("B",B);
-newData.put("C",C);
-newData.put("D",D);
-newData.put("GX",GX);
-newData.put("I",I);
-newData.put("T",T);
-newData.put("O",O);
-newData.put("NUC",NUC);
+newData.put("Name",Passenger);
+newData.put("Passenger",Passenger);
+newData.put("Ticket_Number",Ticket_Number);
+newData.put("Airline",Airline);
+newData.put("Flight_Description",Flight_Description);
+newData.put("Fair",Fair);
+newData.put("TAX",TAX);
+newData.put("Total_Tax",Total_Tax);
 //////////////////
 //// Adding values in a List for a subform
 subForm = List();
@@ -64,22 +61,22 @@ info Airtickets;
 // 
 //
 // moving file to subfolder
-header = Map();
-header.put("Accept","application/vnd.api+json");
-data = Map();
-data_param1 = Map();
-att_param1 = Map();
-att_param1.put("parent_id","gc9phf51ea316cec64922a28a276077fbbd09");
-data_param1.put("attributes",att_param1);
-data_param1.put("type","files");
-data.put("data",data_param1);
-response = invokeurl
-[
-	url :"https://www.zohoapis.com/workdrive/api/v1/files/" + id
-	type :PATCH
-	parameters:data.toString()
-	headers:header
-	connection:"wd"
-];
-info response;
+// header = Map();
+// header.put("Accept","application/vnd.api+json");
+// data = Map();
+// data_param1 = Map();
+// att_param1 = Map();
+// att_param1.put("parent_id","gc9phf51ea316cec64922a28a276077fbbd09");
+// data_param1.put("attributes",att_param1);
+// data_param1.put("type","files");
+// data.put("data",data_param1);
+// response = invokeurl
+// [
+// 	url :"https://www.zohoapis.com/workdrive/api/v1/files/" + id
+// 	type :PATCH
+// 	parameters:data.toString()
+// 	headers:header
+// 	connection:"wd"
+// ];
+// info response;
 }
