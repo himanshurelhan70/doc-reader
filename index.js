@@ -145,28 +145,25 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         console.log("NUC-----> " + NUC);
 
 
-        // Fair and Total Tax
+        // Fair
         const K_start = data.lastIndexOf("K-");
-        const K_end = data.indexOf("\n", K_start);
-        const K = data.substring(K_start + 2, K_end);
-        console.log("K-----> " + K);
-        //// Fair
-        const FairAndTotalTax = K.match(/FMUR(\d+).*?MUR(\d+)/);
-
-    
-        const Fair = FairAndTotalTax[1];
-        const Total_Tax = FairAndTotalTax[2] - FairAndTotalTax[1];
-
-        console.log("Fair ----->", Fair);
-        console.log("Tax ------->", Total_Tax);
-     
-
+        const K_end = data.indexOf(";", K_start);
+        const Fair = data.substring(K_start + 2, K_end).trim();
+        console.log("Fair-----> " + Fair);
 
         //Tax
         const TAX_start = data.lastIndexOf("TAX-");
         const TAX_end = data.indexOf("\n", TAX_start);
         const TAX = data.substring(TAX_start + 4, TAX_end);
         console.log("TAX-----> " + TAX);
+
+        // Total Tax
+        // Extract numbers using regular expression
+        const Taxes = TAX.match(/\d+/g);
+        const Total_Tax = Taxes.reduce((total, tax) => total + parseInt(tax), 0);
+        console.log("Extracted Taxes ---->", Taxes);
+        console.log("Total_Tax ---->", Total_Tax);
+
 
 
         let recordDetails = {
