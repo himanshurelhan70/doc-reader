@@ -145,7 +145,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         console.log("Routing-----> " + Routing);
 
         // Flight Description
-        const Flight_Description = `${Passenger} \n Routing: MRU/DXB \n ${Airline} \n ${Ticket_Number}`;
+        const Flight_Description = `${Passenger}\nRouting: MRU/DXB\n${Airline}\n${Ticket_Number}`;
         console.log(Flight_Description);
 
         // Fair and Total Tax
