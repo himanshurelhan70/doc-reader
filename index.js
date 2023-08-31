@@ -188,6 +188,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             const hLines = matches.map(match => match[2].trim()); 
     
             const H = [];
+            let Class = "";
 
             console.log("hines", hLines);
     
@@ -205,6 +206,12 @@ app.post("/uploadFile/:fileId", async (req, res) => {
                 if(!(Routing[Routing.length-1] == r2)){
                     Routing.push(r2);
                 }
+
+                 // Class of booking
+                 let Bookings= element.match(/([A-Z]) \d{2}[A-Z]{3}\d{4}/);
+                 Class = Bookings[1];
+                 console.log("Class of booking ---->", Class);
+ 
                
                 
                 const hData = {
@@ -220,9 +227,10 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             
             Routing = Routing.join("/");
             recordDetails.H = H;
+            recordDetails.Class = Class;
 
             // Flight Description
-            const Flight_Description = `${Passenger}\nRouting: ${Routing}\nDEP ${Date}\n${Airline}\n${Ticket_Number}`;
+            const Flight_Description = `${Passenger}\nROUTING: ${Routing}\nDEP ${Date}\n${Airline}\n${Ticket_Number}`;
             console.log("Flight_Description ----->", Flight_Description);
             recordDetails.Flight_Description = Flight_Description;
         } else {

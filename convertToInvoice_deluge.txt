@@ -19,12 +19,13 @@ Flight_Description = data.getJSON("Flight_Description");
 Fair = data.getJSON("Fair");
 TAX = data.getJSON("TAX");
 Total_Tax = data.getJSON("Total_Tax").toString();
+Class = data.getJSON("Class");
 H = data.getJSON("H");
 // 
 //
 // Adding all the extracted value to a map()
 newData = Map();
-newData.put("Name",Passenger);
+newData.put("Name",Airline);
 newData.put("Passenger",Passenger);
 newData.put("Ticket_Number",Ticket_Number);
 newData.put("Airline",Airline);
@@ -32,6 +33,7 @@ newData.put("Flight_Description",Flight_Description);
 newData.put("Fair",Fair);
 newData.put("TAX",TAX);
 newData.put("Total_Tax",Total_Tax);
+newData.put("Class",Class);
 //////////////////
 //// Adding values in a List for a subform
 subForm = List();
@@ -58,25 +60,26 @@ newData.put("Subform_1",subForm);
 info "newData ----->" + newData;
 Airtickets = zoho.crm.createRecord("Airtickets",newData,{"trigger":{"workflow"}});
 info Airtickets;
-// 
-//
 // moving file to subfolder
-// header = Map();
-// header.put("Accept","application/vnd.api+json");
-// data = Map();
-// data_param1 = Map();
-// att_param1 = Map();
-// att_param1.put("parent_id","gc9phf51ea316cec64922a28a276077fbbd09");
-// data_param1.put("attributes",att_param1);
-// data_param1.put("type","files");
-// data.put("data",data_param1);
-// response = invokeurl
-// [
-// 	url :"https://www.zohoapis.com/workdrive/api/v1/files/" + id
-// 	type :PATCH
-// 	parameters:data.toString()
-// 	headers:header
-// 	connection:"wd"
-// ];
-// info response;
+///
+if(response.getJSON("success") == true){
+	header = Map();
+	header.put("Accept","application/vnd.api+json");
+	data = Map();
+	data_param1 = Map();
+	att_param1 = Map();
+	att_param1.put("parent_id","gc9phf51ea316cec64922a28a276077fbbd09");
+	data_param1.put("attributes",att_param1);
+	data_param1.put("type","files");
+	data.put("data",data_param1);
+	response = invokeurl
+	[
+		url :"https://www.zohoapis.com/workdrive/api/v1/files/" + id
+		type :PATCH
+		parameters:data.toString()
+		headers:header
+		connection:"wd"
+	];
+	info response;
+	}
 }
