@@ -126,11 +126,17 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const Ticket_Number = data.substring(Ticket_Number_start + 3, Ticket_Number_end);
         console.log("Ticket_Number-----> " + Ticket_Number);
     
-        // O -
+        // Date
         const o_start = data.lastIndexOf("O-");
         const o_end = data.indexOf("\n", o_start);
         const O = data.substring(o_start + 3, o_end);
         console.log("O-----> " + O);
+        const inputString = "O-XXXX;24DECXX;LD20DEC232359";
+
+        const dateMatch = O.match(/(\d{2}[A-Z]{3}\d{2})/);
+        const Date = dateMatch[1];
+        console.log("Date  ---->", Date);
+
                
         // N-NUC
         const NUC_start = data.lastIndexOf("O-");
@@ -138,15 +144,6 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const NUC = data.substring(NUC_start + 3, NUC_end);
         console.log("NUC-----> " + NUC);
 
-        // routing
-        const Routing_start = data.lastIndexOf("Q-");
-        const Routing_end = data.indexOf("\n", Routing_start);
-        const Routing = data.substring(Routing_start + 3, Routing_end);
-        console.log("Routing-----> " + Routing);
-
-        // Flight Description
-        const Flight_Description = `${Passenger}\nRouting: MRU/DXB\n${Airline}\n${Ticket_Number}`;
-        console.log(Flight_Description);
 
         // Fair and Total Tax
         const K_start = data.lastIndexOf("K-");
@@ -176,12 +173,13 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             Passenger: Passenger,
             Ticket_Number: Ticket_Number,
             Airline: Airline,
-            Flight_Description: Flight_Description,
             TAX: TAX,
             Fair: Fair,
             Total_Tax: Total_Tax,
         };
     
+        // Routing
+        let Routing = [];
         // H-
         // H-001, H-002, H-003 and so on
         const regex = /(H-\d{3};)([^\n]*\n)/g; // Regular expression to match entire lines starting with H-001, H-002, etc.
@@ -193,11 +191,25 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             const hLines = matches.map(match => match[2].trim()); 
     
             const H = [];
+
+            console.log("hines", hLines);
     
             hLines.forEach(element => {
     
                 hArr = element.split(";");
-    
+                
+                const r1 = hArr[0].substring(4);
+                const r2 = hArr[2].trim();
+
+                if(!(Routing[Routing.length-1] == r1)){
+                    Routing.push(r1);
+                }
+               
+                if(!(Routing[Routing.length-1] == r2)){
+                    Routing.push(r2);
+                }
+               
+                
                 const hData = {
                     h1: hArr[0].trim(),
                     h2: hArr[1].trim(),
@@ -208,8 +220,14 @@ app.post("/uploadFile/:fileId", async (req, res) => {
     
                 H.push(hData);
             });
-    
+            
+            Routing = Routing.join("/");
             recordDetails.H = H;
+
+            // Flight Description
+            const Flight_Description = `${Passenger}\nRouting: ${Routing}\nDEP ${Date}\n${Airline}\n${Ticket_Number}`;
+            console.log("Flight_Description ----->", Flight_Description);
+            recordDetails.Flight_Description = Flight_Description;
         } else {
             console.log("No matches found.");
         }
