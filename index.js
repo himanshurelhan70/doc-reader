@@ -84,11 +84,11 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         // k. Tax Total (Currency)
     
     
-        // A-
-        const a_start = data.indexOf("A-");
-        const a_end = data.indexOf("\n", a_start);
-        const A = data.substring(a_start + 2, a_end);
-        console.log("A -----> " + A);
+        // Airline
+        const Airline_start = data.indexOf("A-");
+        const Airline_end = data.indexOf(";", Airline_start);
+        const Airline = data.substring(Airline_start + 2, Airline_end);
+        console.log("Airline -----> " + Airline);
         
         // B-
         const b_start = data.indexOf("B-");
@@ -114,17 +114,17 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const GX = data.substring(gx_start + 3, gx_end);
         console.log("GX -----> " + GX);
     
-        // I-
-        const i_start = data.lastIndexOf("I-");
-        const i_end = data.indexOf("\n", i_start);
-        const I = data.substring(i_start + 3, i_end);
-        console.log("I -----> " + I);
+        // Passenger
+        const Passenger_start = data.lastIndexOf("I-");
+        const Passenger_end = data.indexOf(";", Passenger_start+8);
+        const Passenger = data.substring(Passenger_start + 8, Passenger_end);
+        console.log("Passenger -----> " + Passenger);
     
-        // T -
-        const t_start = data.lastIndexOf("T-");
-        const t_end = data.indexOf("\n", t_start);
-        const T = data.substring(t_start + 3, t_end);
-        console.log("T-----> " + T);
+        // Ticket Number
+        const Ticket_Number_start = data.lastIndexOf("T-K");
+        const Ticket_Number_end = data.indexOf("\n", Ticket_Number_start);
+        const Ticket_Number = data.substring(Ticket_Number_start + 3, Ticket_Number_end);
+        console.log("Ticket_Number-----> " + Ticket_Number);
     
         // O -
         const o_start = data.lastIndexOf("O-");
@@ -137,18 +137,49 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const NUC_end = data.indexOf("\n", NUC_start);
         const NUC = data.substring(NUC_start + 3, NUC_end);
         console.log("NUC-----> " + NUC);
-           
+
+        // routing
+        const Routing_start = data.lastIndexOf("Q-");
+        const Routing_end = data.indexOf("\n", Routing_start);
+        const Routing = data.substring(Routing_start + 3, Routing_end);
+        console.log("Routing-----> " + Routing);
+
+        // Flight Description
+        const Flight_Description = `${Passenger} \n Routing: MRU/DXB \n ${Airline} \n ${Ticket_Number}`;
+        console.log(Flight_Description);
+
+        // Fair and Total Tax
+        const K_start = data.lastIndexOf("K-");
+        const K_end = data.indexOf("\n", K_start);
+        const K = data.substring(K_start + 2, K_end);
+        console.log("K-----> " + K);
+        //// Fair
+        const FairAndTotalTax = K.match(/FMUR(\d+).*?MUR(\d+)/);
+
     
+        const Fair = FairAndTotalTax[1];
+        const Total_Tax = FairAndTotalTax[2] - FairAndTotalTax[1];
+
+        console.log("Fair ----->", Fair);
+        console.log("Tax ------->", Total_Tax);
+     
+
+
+        //Tax
+        const TAX_start = data.lastIndexOf("TAX-");
+        const TAX_end = data.indexOf("\n", TAX_start);
+        const TAX = data.substring(TAX_start + 4, TAX_end);
+        console.log("TAX-----> " + TAX);
+
+
         let recordDetails = {
-            A: A,
-            B: B,
-            C: C,
-            D: D,
-            GX: GX,
-            I: I,
-            T: T,
-            O: O,
-            NUC : NUC
+            Passenger: Passenger,
+            Ticket_Number: Ticket_Number,
+            Airline: Airline,
+            Flight_Description: Flight_Description,
+            TAX: TAX,
+            Fair: Fair,
+            Total_Tax: Total_Tax,
         };
     
         // H-
