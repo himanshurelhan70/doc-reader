@@ -148,7 +148,9 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         // Fair
         const K_start = data.lastIndexOf("K-");
         const K_end = data.indexOf(";", K_start);
-        const Fair = data.substring(K_start + 2, K_end).trim();
+        let Fair = data.substring(K_start + 2, K_end).trim();
+        
+        Fair = Fair.match(/\d+/)[0];
         console.log("Fair-----> " + Fair);
 
         //Tax
