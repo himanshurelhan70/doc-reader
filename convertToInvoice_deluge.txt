@@ -39,19 +39,10 @@ newData.put("Class",Class);
 subForm = List();
 H = data.getJSON("H");
 // info "H ----> " + H;
-for each  item in H
+for each item in H
 {
 	subFormData = Map();
-	h1 = item.getJSON("h1");
-	h2 = item.getJSON("h2");
-	h3 = item.getJSON("h3");
-	h4 = item.getJSON("h4");
-	h5 = item.getJSON("h5");
-	subFormData.put("h1",h1);
-	subFormData.put("h2",h2);
-	subFormData.put("h3",h3);
-	subFormData.put("h4",h4);
-	subFormData.put("h5",h5);
+	subFormData.put("Routing",item);
 	subForm.add(subFormData);
 }
 //////////////
@@ -62,24 +53,25 @@ Airtickets = zoho.crm.createRecord("Airtickets",newData,{"trigger":{"workflow"}}
 info Airtickets;
 // moving file to subfolder
 ///
-if(response.getJSON("success") == true){
-	header = Map();
-	header.put("Accept","application/vnd.api+json");
-	data = Map();
-	data_param1 = Map();
-	att_param1 = Map();
-	att_param1.put("parent_id","gc9phf51ea316cec64922a28a276077fbbd09");
-	data_param1.put("attributes",att_param1);
-	data_param1.put("type","files");
-	data.put("data",data_param1);
-	response = invokeurl
-	[
-		url :"https://www.zohoapis.com/workdrive/api/v1/files/" + id
-		type :PATCH
-		parameters:data.toString()
-		headers:header
-		connection:"wd"
-	];
-	info response;
-	}
+// if(response.getJSON("success") == true)
+// {
+// 	header = Map();
+// 	header.put("Accept","application/vnd.api+json");
+// 	data = Map();
+// 	data_param1 = Map();
+// 	att_param1 = Map();
+// 	att_param1.put("parent_id","gc9phf51ea316cec64922a28a276077fbbd09");
+// 	data_param1.put("attributes",att_param1);
+// 	data_param1.put("type","files");
+// 	data.put("data",data_param1);
+// 	response = invokeurl
+// 	[
+// 		url :"https://www.zohoapis.com/workdrive/api/v1/files/" + id
+// 		type :PATCH
+// 		parameters:data.toString()
+// 		headers:header
+// 		connection:"wd"
+// 	];
+// 	info response;
+// }
 }

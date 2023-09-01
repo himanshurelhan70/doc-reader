@@ -196,6 +196,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
     
                 hArr = element.split(";");
                 
+                // Routing
                 const r1 = hArr[0].substring(4);
                 const r2 = hArr[2].trim();
 
@@ -207,20 +208,21 @@ app.post("/uploadFile/:fileId", async (req, res) => {
                     Routing.push(r2);
                 }
 
-                 // Class of booking
-                 let Bookings= element.match(/([A-Z]) \d{2}[A-Z]{3}\d{4}/);
-                 Class = Bookings[1];
-                 console.log("Class of booking ---->", Class);
- 
+                // Class of booking
+                let Bookings= element.match(/([A-Z]) \d{2}[A-Z]{3}\d{4}/);
+                Class = Bookings[1];
+                console.log("Class of booking ---->", Class);
                
                 
-                const hData = {
-                    h1: hArr[0].trim(),
-                    h2: hArr[1].trim(),
-                    h3: hArr[2].trim(),
-                    h4: hArr[3].trim(),
-                    h5: hArr[4].trim(),
-                }
+                // const hData = {
+                //     h1: hArr[0].trim(),
+                //     h2: hArr[1].trim(),
+                //     h3: hArr[2].trim(),
+                //     h4: hArr[3].trim(),
+                //     h5: hArr[4].trim(),
+                // }
+
+                const hData = hArr.join("\n");
     
                 H.push(hData);
             });
