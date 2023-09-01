@@ -1,0 +1,33 @@
+// Get the recently created ticket record
+ticket = zoho.crm.getRecordById("Airtickets",id);
+name = ticket.get("Name");
+ticketId = ticket.get("id").toLong();
+Airline = ticket.get("Airline");
+Passenger = ticket.get("Passenger");
+Ticket_Number = ticket.get("Ticket_Number");
+Flight_Description = ticket.get("Flight_Description");
+Ticket_Number = ticket.get("Ticket_Number");
+Fair = ticket.get("Fair");
+TAX = ticket.get("TAX");
+Total_Tax = ticket.get("Total_Tax");
+Class = ticket.get("Class");
+// 	
+// 	
+newDeal = Map();
+newDeal.put("Airline",Airline);
+newDeal.put("Passenger",Passenger);
+newDeal.put("Ticket_Number",Ticket_Number);
+newDeal.put("Flight_Description",Flight_Description);
+newDeal.put("Ticket_Number",Ticket_Number);
+newDeal.put("Fair",Fair);
+newDeal.put("TAX",TAX);
+newDeal.put("Total_Tax",Total_Tax);
+newDeal.put("Class",Class);
+// 	newDeal.put("Contact_Name", ticketId);
+newDeal.put("Closing_Date",zoho.currentdate);
+newDeal.put("Stage","New Request");
+// 
+// output = zoho.crm.getRecordById("Invoices",5810070000000807214);
+// info "output --> " + output;
+response = zoho.crm.createRecord("Deals",newDeal,{"trigger":{"workflow"}});
+info response;
