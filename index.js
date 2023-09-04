@@ -159,11 +159,16 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const TAX = data.substring(TAX_start + 4, TAX_end);
         console.log("TAX-----> " + TAX);
 
+        // Taxes
+        const TaxesAndNames = TAX.split(';');
+        console.log("TaxesAndNames --->", TaxesAndNames);
+
+
         // Total Tax
         // Extract numbers using regular expression
         const Taxes = TAX.match(/\d+/g);
-        const Total_Tax = Taxes.reduce((total, tax) => total + parseInt(tax), 0);
         console.log("Extracted Taxes ---->", Taxes);
+        const Total_Tax = Taxes.reduce((total, tax) => total + parseInt(tax), 0);
         console.log("Total_Tax ---->", Total_Tax);
 
 
@@ -172,8 +177,8 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             Passenger: Passenger,
             Ticket_Number: Ticket_Number,
             Airline: Airline,
-            TAX: TAX,
             Fair: Fair,
+            TaxesAndNames: TaxesAndNames,
             Total_Tax: Total_Tax,
         };
     
