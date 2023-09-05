@@ -12,22 +12,10 @@ TAX = ticket.get("TAX");
 Total_Tax = ticket.get("Total_Tax");
 Class = ticket.get("Class");
 // 	
-// 	
 newDeal = Map();
-newDeal.put("Airline",Airline);
-newDeal.put("Passenger",Passenger);
-newDeal.put("Ticket_Number",Ticket_Number);
-newDeal.put("Flight_Description",Flight_Description);
-newDeal.put("Ticket_Number",Ticket_Number);
-newDeal.put("Fair",Fair);
-newDeal.put("TAX",TAX);
-newDeal.put("Total_Tax",Total_Tax);
-newDeal.put("Class",Class);
-// 	newDeal.put("Contact_Name", ticketId);
-newDeal.put("Closing_Date",zoho.currentdate);
+newDeal.put("Deal_Name",name);
 newDeal.put("Stage","New Request");
+newDeal.put("Subform_2",{{"Airline_1":Airline,"Passenger2":Passenger,"Class_1":Class,"Fair_1":Fair,"Lookup_1":{"name":Ticket_Number,"id":id}}});
 // 
-// output = zoho.crm.getRecordById("Invoices",5810070000000807214);
-// info "output --> " + output;
 response = zoho.crm.createRecord("Deals",newDeal,{"trigger":{"workflow"}});
 info response;

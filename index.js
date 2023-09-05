@@ -160,7 +160,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         console.log("TAX-----> " + TAX);
 
         // Taxes
-        const TaxesAndNames = TAX.split(';');
+        const TaxesAndNames = TAX.split(';').filter(tax => tax.trim() !== '');
         console.log("TaxesAndNames --->", TaxesAndNames);
 
 
