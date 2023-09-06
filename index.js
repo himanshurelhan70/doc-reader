@@ -112,9 +112,21 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const TAX = data.substring(TAX_start + 4, TAX_end);
         console.log("TAX-----> " + TAX);
 
-        // Taxes
-        const TaxesAndNames = TAX.split(';').filter(tax => tax.trim() !== '');
+        // Taxes, Names and Codes
+        const TaxesAndNames = TAX.split(';')
+            .filter(tax => tax.trim() !== '')
+            .map(tax => {
+                const parts = tax.trim().match(/^([A-Z]+)(\d+)\s+([A-Z]+)$/);
+                if (parts) {
+                    const [, prefix, number, suffix] = parts;
+                    return { prefix, number, suffix };
+                } else {
+                    return null;
+                }
+            })
+            .filter(tax => tax !== null);
         console.log("TaxesAndNames --->", TaxesAndNames);
+
 
 
         // Total Tax
