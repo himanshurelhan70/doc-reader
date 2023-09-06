@@ -1,0 +1,39 @@
+deal = zoho.crm.getRecordById("Deals",deal_id);
+subForm = deal.get("Subform_2");
+productsIds = {5810070000000494011,5810070000000494021,5810070000000494031};
+//// looping on All linked Airtfile in a deal
+for each  item in subForm
+{
+	// id of Airticket record
+	id = item.get("Lookup_1").get("id");
+	// Get Data of Airticket record
+	airFile = zoho.crm.getRecordById("Airtickets",id);
+	Flight_Description = airFile.get("Flight_Description");
+	Fair = airFile.get("Fair").toLong();
+	Ticket_Number = airFile.get("Ticket_Number");
+	Total_Tax = airFile.get("Total_Tax").toLong();
+	////////////
+	newInvoice = Map();
+	productDetails = List();
+	for each  productId in productsIds
+	{
+		if(productId == 5810070000000494011)
+		{
+			productDetails.add({"product":{"id":productId},"quantity":1,"product_description":Flight_Description,"list_price":Fair});
+		}
+		else if(productId == 5810070000000494021)
+		{
+			productDetails.add({"product":{"id":productId},"quantity":1,"product_description":Ticket_Number,"list_price":Total_Tax});
+		}
+		else if(productId == 5810070000000494031)
+		{
+			productDetails.add({"product":{"id":productId},"quantity":1,"product_description":Ticket_Number});
+		}
+	}
+	///create invoice
+	newInvoice.put("Subject","Test");
+	newInvoice.put("Product_Details",productDetails);
+	info newInvoice;
+	info zoho.crm.createRecord("Invoices",newInvoice);
+}
+return "successful";
