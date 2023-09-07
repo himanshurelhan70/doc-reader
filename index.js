@@ -118,19 +118,45 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         console.log("TAX-----> " + TAX);
 
         // Taxes, Names and Codes
+        // const TaxesAndNames = TAX.split(';')
+        //     .filter(tax => tax.trim() !== '')
+        //     .map(tax => {
+        //         const parts = tax.trim().match(/^([A-Z]+)(\d+)\s+([A-Z]+)$/);
+        //         if (parts) {
+        //             const [, prefix, number, suffix] = parts;
+        //             return { prefix, number, suffix };
+        //         } else {
+        //             return null;
+        //         }
+        //     })
+        //     .filter(tax => tax !== null);
+        // console.log("TaxesAndNames --->", TaxesAndNames);
+        ///////////////////
+
+        // Taxes, Names, and Codes
         const TaxesAndNames = TAX.split(';')
             .filter(tax => tax.trim() !== '')
             .map(tax => {
-                const parts = tax.trim().match(/^([A-Z]+)(\d+)\s+([A-Z]+)$/);
+                const parts = tax.trim().match(/^([A-Z]+\s+\d+\s+[A-Z]+)$/);
                 if (parts) {
-                    const [, prefix, number, suffix] = parts;
+                    const [taxInfo] = parts;
+                    const [prefix, number, suffix] = taxInfo.split(/\s+/);
                     return { prefix, number, suffix };
-                } else {
-                    return null;
+                }
+                else {
+                    // If the previous regular expression doesn't match, try another format
+                    const parts = tax.trim().match(/^([A-Z]+)(\d+)\s+([A-Z]+)$/);
+                    if (parts) {
+                        const [, prefix, number, suffix] = parts;
+                        return { prefix, number, suffix };
+                    } else {
+                        return null;
+                    }
                 }
             })
             .filter(tax => tax !== null);
         console.log("TaxesAndNames --->", TaxesAndNames);
+
 
 
 
