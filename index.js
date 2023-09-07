@@ -144,14 +144,14 @@ app.post("/uploadFile/:fileId", async (req, res) => {
 
         // Mail
         // Regular expression pattern to match an email address
-        const emailRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}/;
+        const emailRegex = /-(\w+@\w+\.\w+)/;
 
         // Use the match method to find the email address in the string
         let Email = B.match(emailRegex);
 
         // Check if there is a match and extract the email address
         if (Email && Email.length > 0) {
-            Email = Email[0];
+            Email = Email[1];
             console.log(Email);
         } else {
             const Email = "";
