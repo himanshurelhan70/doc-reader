@@ -92,11 +92,16 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const o_end = data.indexOf("\n", o_start);
         const O = data.substring(o_start + 3, o_end);
         console.log("O-----> " + O);
-        const inputString = "O-XXXX;24DECXX;LD20DEC232359";
+
 
         const dateMatch = O.match(/(\d{2}[A-Z]{3}\d{2})/);
-        const Date = dateMatch[1];
-        console.log("Date  ---->", Date);
+        const dateString = dateMatch[1];
+        console.log("dateString  ---->", dateString);
+
+        // Use string manipulation to insert hyphens
+        const Date = dateString.slice(0, 2) + '-' + dateString.slice(2, 5) + '-' + dateString.slice(5);
+        console.log("Date -->", Date);
+
 
         // Fair
         const K_start = data.lastIndexOf("K-");
