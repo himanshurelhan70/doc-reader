@@ -1,0 +1,21 @@
+1239JD ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ EMIRATES                     1 OF 1   L3HAFO/1A   OEK0702U MRUDXB 06MAY
+ TAMANG/ASTAMAN MR A             TC                   USSOSMU1
+                                          05MAY23  XEK2262U DXBKTM 07MAY
+ NON-END/FLEX                                         USSOSMU1
+
+
+
+ MRU EK X/DXB EK KTM507.73NUC507.73END ROE46.46135
+ 3XT1000MU888OV441F663ZR
+
+
+
+ MUR 23590.00               EXCH/
+ MUR     6149 YQ FCI 0
+ MUR       47 JE CASH
+ MUR     2392 XT ORIG/
+ MUR 32178.00
+          176 1236040892 6PRI  FFVV
+ 7906/                         1761MUR    23590         0        8588.00

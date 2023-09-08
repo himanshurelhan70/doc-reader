@@ -1,0 +1,21 @@
+1288GS ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   TI4DUY/1A   OMK0912V MRUDXB 15MAY
+ ZAMA/JEAN FRANCOIS DIDIER A     TCXXILCA             VMKEKMUR
+                                          12MAY23  XEK0093B DXBBLQ 16MAY
+ MUR2000 NONREF - VALID ON MK/EK ONLY                 VMKEKMUR
+ NONEND/NONRER                                     OEK0094U BLQDXB 20MAY
+                                                      VMKEKMUR
+                                                   XMK0911V DXBMRU 21MAY
+ MRU MK X/DXB EK BLQ M/IT EK X/DXB MK MRU M/IT END    VMKEKMUR
+  PD XT44EX882F6331HB425IT47JE69MJ1000MU886OV112VT
+ 19340YQ1374YR126ZR
+
+
+ MUR 21500.00               EXCH/2391236040891
+ MUR        4 F6 FCI N
+ MUR        2 ZR CASH CASH
+ PD     24636 XT ORIG/2391236040891MRU05MAY2352200050
+ MUR     6.00
+          239 9727383136 6PRI  FFFF
+ 7906/                         2391IT         0       -64           6.00

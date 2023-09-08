@@ -1,0 +1,21 @@
+1240GM ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ SAUDI ARABIAN AIRLINES       1 OF 1   KV4G86/1A   OSV0482L MRUJED 28MAY
+ ANTOINE LEONIDE/CHRSITINE MRS   TC                   LPRTMR
+ A                                        10MAY23  XSV0127L JEDCDG 29MAY
+ TKT VALD 1Y FRM ISSUE DATE                           LPRTMR
+                                                   OSV0126L CDGJED 17AUG
+                                                      LPRTMR
+                                                   XSV0481L JEDMRU 18AUG
+ MRU SV X/JED SV PAR244.61SV X/JED SV MRU244.61NUC    LPRTMR
+ 489.22END ROE46.461353XT1000MU892OV396E31364IO455
+ FR651FR231IZ154O41546QX
+
+
+ MUR 22730.00               EXCH/
+ MUR     2730 YR FCI 0
+ MUR       47 JE CASH
+ MUR     6689 XT ORIG/
+ MUR 32196.00
+          065 1236040963 4PRI  FFFF
+ 7906/                         0652MUR    22730         0        9466.00

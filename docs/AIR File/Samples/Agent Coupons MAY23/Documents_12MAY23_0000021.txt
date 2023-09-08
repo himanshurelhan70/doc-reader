@@ -1,0 +1,21 @@
+1288GS ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   TDN7R9/1A   OMK0843M MRUCPT 28MAY
+ CHOYTUN/RAJIV MR A              TCXXILCA             MAPRMUR2
+                                          12MAY23  O4Z0902E CPTJNB 03JUN
+ VALID MK ONLY NON END/NON REF/NON RER                UAMKMU1
+                                                   XMK0852U JNBMRU 03JUN
+                                                      UAMKMU1
+
+ MRU MK CPT139.90 4Z X/JNB MK MRU319.13NUC459.03EN
+ D ROE46.461353XT47JE1000MU250OV142EV150UM457WC874
+ ZA
+
+
+ MUR 21330.00               EXCH/
+ MUR     9369 YQ FCI Q
+ MUR     1374 YR CASH
+ MUR     2920 XT ORIG/
+ MUR 34993.00
+          239 9727383139 2PRI  FFFV
+ 7906/                         2391MUR    21330         0       13663.00

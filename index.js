@@ -103,13 +103,46 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         console.log("Date -->", Date);
 
 
-        // Fair
+        // Fair and currency
         const K_start = data.lastIndexOf("K-");
-        const K_end = data.indexOf(";", K_start);
-        let Fair = data.substring(K_start + 2, K_end).trim();
+        const K_end = data.indexOf("\n", K_start);
+        let Fair = data.substring(K_start, K_end).trim();
+        console.log("fair", Fair);
 
-        Fair = Fair.match(/\d+/)[0];
-        console.log("Fair-----> " + Fair);
+        function extractBaseFareAndCurrency(inputString) {
+            const match = inputString.match(/K-([A-Z]+)([\d.]+)\s*;/);
+
+            if (match && match[1] && match[2]) {
+                const baseCurrency = match[1].substring(1); // Remove the first character
+                const baseAmount = parseFloat(match[2]).toFixed(2); // Convert to decimal with two decimal places
+                return { baseCurrency, baseAmount };
+            } else {
+                return null;
+            }
+        }
+
+        const {baseCurrency, baseAmount} = extractBaseFareAndCurrency(Fair);
+        console.log("Currency ->", baseCurrency, "Base Fair ->", baseAmount);
+
+
+        //// exchange Rate
+        function extractConversionRate(inputString) {
+        const match = inputString.match(/;([\d.]+)\s*;*$/);
+
+        if (match && match[1]) {
+            const conversionRate = parseFloat(match[1]);
+            return conversionRate;
+        } else {
+            return null;
+        }
+        }
+
+        const exchangeRate = extractConversionRate(Fair);
+        console.log("Exchange Rate ->", exchangeRate);
+       
+        /////
+        const murAmount = baseAmount * exchangeRate;
+        console.log("murAmount ->", murAmount);
 
         //Tax
         const TAX_start = data.lastIndexOf("TAX-");
@@ -117,21 +150,6 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const TAX = data.substring(TAX_start + 4, TAX_end);
         console.log("TAX-----> " + TAX);
 
-        // Taxes, Names and Codes
-        // const TaxesAndNames = TAX.split(';')
-        //     .filter(tax => tax.trim() !== '')
-        //     .map(tax => {
-        //         const parts = tax.trim().match(/^([A-Z]+)(\d+)\s+([A-Z]+)$/);
-        //         if (parts) {
-        //             const [, prefix, number, suffix] = parts;
-        //             return { prefix, number, suffix };
-        //         } else {
-        //             return null;
-        //         }
-        //     })
-        //     .filter(tax => tax !== null);
-        // console.log("TaxesAndNames --->", TaxesAndNames);
-        ///////////////////
 
         // Taxes, Names, and Codes
         const TaxesAndNames = TAX.split(';')

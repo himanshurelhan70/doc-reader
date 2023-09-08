@@ -1,0 +1,21 @@
+1240GM ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   Q73PHV/1A   OMK0127Y RRGMRU 12JUL
+ FLORE/LOUIS LIRAUD MR A         TC                   YRT3
+                                          24MAY23  OMK0140Y MRURRG 17JUL
+ NON END/REROUTABLE VALID ON MK FLIGHTS ONLY          YRT3
+
+
+
+ RRG MK MRU2347.50MK RRG2347.50MUR4695.00END
+
+
+
+
+ MUR  4695.00               EXCH/
+ MUR     4548 YQ FCI 0
+ MUR      110 YR CASH
+ MUR      150 MU ORIG/
+ MUR  9503.00
+          239 9727383251 2PRI  FFVV
+ 7906/                         2391MUR     4695         0        4808.00

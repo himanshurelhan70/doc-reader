@@ -1,0 +1,106 @@
+
+********************** ---------------------------- ********************
+ EMD-239-1888213236 4        EMD AGENT COUPON           1A ELECTRONIC
+                                                        MISCELLANEOUS
+AIR MAURITIUS                        19MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1252 /AGSU
+ROBERT/EMMA MS                        PNR OIQD6A/1A NOT VALID FOR TRAVEL
+FINANCIAL IMPACT                                    ********************
+
+CPN 1 98F PENALTY FEE
+      PRESENT TO: AIR MAURITIUS
+      PRESENT AT: MAURITIUS
+      NON-REFUNDABLE
+      NON-EXCHANGEABLE
+      CONSUMED AT ISSUANCE
+      NON-INTERLINEABLE
+      ICW: 2399727383199
+      RMKS:
+
+
+
+
+
+
+MUR        2000                 CASH
+                           EXCH/
+                           ORIG ISS/
+MUR        2000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************** ---------------------------- ********************
+ EMD-239-1888213236 4     EMD PASSENGER RECEIPT         1A ELECTRONIC
+                                                        MISCELLANEOUS
+AIR MAURITIUS                        19MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1252 /AGSU
+ROBERT/EMMA MS                        PNR OIQD6A/1A NOT VALID FOR TRAVEL
+FINANCIAL IMPACT                                    ********************
+
+CPN 1 98F PENALTY FEE
+      OPERATING CC:MK
+      PRESENT TO: AIR MAURITIUS
+      PRESENT AT: MAURITIUS
+      NON-REFUNDABLE
+      NON-EXCHANGEABLE
+      CONSUMED AT ISSUANCE
+      NON-INTERLINEABLE
+      ICW: 2399727383199
+      RMKS:
+
+
+
+
+
+
+MUR        2000                 CASH
+                           EXCH/
+                           ORIG ISS/
+MUR        2000
+FOID-
+
+DATA PROTECTION NOTICE: YOUR PERSONAL DATA WILL BE PROCESSED IN
+ACCORDANCE WITH THE APPLICABLE CARRIER'S PRIVACY POLICY AND, IF YOUR
+BOOKING IS MADE VIA A RESERVATION SYSTEM PROVIDER ("GDS"), WITH ITS
+PRIVACY POLICY. THESE ARE AVAILABLE AT
+http://www.iatatravelcenter.com/privacy OR FROM THE CARRIER OR GDS
+DIRECTLY. YOU SHOULD READ THIS DOCUMENTATION, WHICH APPLIES TO YOUR
+BOOKING AND SPECIFIES, FOR EXAMPLE, HOW YOUR PERSONAL DATA IS COLLECTED,
+STORED, USED, DISCLOSED AND TRANSFERRED. (APPLICABLE FOR INTERLINE
+CARRIAGE)

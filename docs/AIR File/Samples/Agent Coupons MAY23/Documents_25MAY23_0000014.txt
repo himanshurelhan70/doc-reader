@@ -1,0 +1,21 @@
+1252AG ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR FRANCE                   1 OF 1   U4HNG9/1A   OAF0473N MRUCDG 28JUL
+ BEGUE/LAETITIA ELISE DANIELLE   TC                   NO50EBSZ
+ MS A                                     25MAY23  XAF7520L CDGBES 29JUL
+                                                      NO50EBSZ
+                                                   OAF7523L BESCDG 17AUG
+                                                      RC50MBSZ
+                                                   XAF0470R CDGMRU 17AUG
+ MRU AF X/PAR AF BES438.10AF X/PAR AF MRU390.05 1S    RC50MBSZ
+ 1.09NUC829.24END ROE46.461353XT12076YR47JE1000MU8
+ 76OV447FR1188FR227IZ151O4921QW1033QX
+
+
+ MUR 38530.00               EXCH/
+ MUR     1712 YQ FCI 0
+ MUR      505 YR CASH
+ MUR    17966 XT ORIG/
+ MUR 58713.00
+          057 9727383270 0PRI  FFFF
+ 7906/                         0571MUR    38530         0       20183.00

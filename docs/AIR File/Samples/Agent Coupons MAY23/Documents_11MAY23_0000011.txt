@@ -1,0 +1,21 @@
+1252AG ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ HAHN AIR                     1 OF 1   KSG94E/1A   OVA0698T PERMEL 17MAY
+ EYNAUD/ERIC NICOLAS OLIVIER     TC                   TZCH0
+ MR A                                     11MAY23  OVA0211I MELADL 24MAY
+ RESTRICTIONS APPLY/NONEND NONREF/ PENALTIES APPLY    IZCH0SX
+ BR31.37311388                                     OVA0717T ADLPER 25MAY
+                                                      TZCH0
+
+ PER VA MEL Q57.92 289.61VA ADL Q15.13 75.66VA PER
+  Q52.15 260.79AUD751.26END XT701QR549WG
+
+
+
+ AUD   751.26  MUR    23570 EXCH/
+ MUR      837 YR FCI 0
+ MUR      701 QR CASH
+ MUR     1250 XT ORIG/
+ MUR 26358.00
+          169 9727383129 6PRI  FFFV
+ 7906/                         1691MUR    23570         0        2788.00

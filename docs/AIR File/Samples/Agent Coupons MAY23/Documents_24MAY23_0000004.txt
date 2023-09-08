@@ -1,0 +1,21 @@
+1240GM ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ EMIRATES                     1 OF 1   Q7F8PG/1A   OEK0082B LYSDXB 11JUL
+ LE SAUX/CHRISTOPHE HERVE MR A   TC                   BKEESFR1
+                                          24MAY23  XEK0701B DXBMRU 12JUL
+ NON-END/FLEX BR50.53015481                           BKEESFR1
+                                                   OEK0704K MRUDXB 17JUL
+                                                      KKEESFR1
+                                                   XEK0081K DXBLYS 18JUL
+ LYS EK X/DXB EK MRU591.53EK X/DXB EK LYS395.26NUC    KKEESFR1
+ 986.79END ROE0.917107XT47JE1000MU880OV449FR440FR2
+ 28IZ152O4804QX892F6128ZR
+
+
+ EUR   905.00  MUR    45730 EXCH/
+ MUR    16070 YQ FCI 0
+ MUR     1635 HH CASH
+ MUR     5020 XT ORIG/
+ MUR 68455.00
+          176 9727383254 5PRI  FFFF
+ 7906/                         1761MUR    45730         0       22725.00

@@ -1,0 +1,21 @@
+1239JD ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ KENYA AIRWAYS                1 OF 1   L7LR9G/1A   OKQ0271I MRUNBO 18JUN
+ EGOT/PIERRE MICHEL MR A         TC                   ISFMU
+                                          31MAY23  OKQ0112I NBOCDG 23JUN
+ NON ENDO/ FARE/ RSTR APPLY                           ISFMU
+                                                   OKQ0115I CDGNBO 29JUN
+                                                      ISFMU
+                                                   XKQ0270I NBOMRU 30JUN
+ MRU KQ NBO KQ PAR898.48KQ X/NBO KQ MRU898.48 1S10    ISFMU
+ 0.00NUC1896.96END ROE46.461353PD XT444FR590FR2256
+ IZ94JE1000MU223OV901O41510QX2335TU1496YQ16808YR
+
+
+ MUR 88140.00               EXCH/7061236010747
+ MUR       46 FR FCI 0
+ MUR       23 OV CASH CASH
+ PD     27657 XT ORIG/7061236010747MRU02MAR2352200050
+ MUR    69.00
+          706 9727383341 0PRI  FFFF
+ 7906/                         7066EX         0      -395          69.00

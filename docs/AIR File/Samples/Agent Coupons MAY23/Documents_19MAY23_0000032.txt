@@ -1,0 +1,21 @@
+1252AG ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR AUSTRAL                  1 OF 1   NB2TCZ/1A   OUU0109N MRURUN 30JUN
+ GUIDEZ/CONSTANCE INES MILLA C   TC                   FHPRSMCH
+                                          19MAY23  XUU0971F RUNCDG 01JUL
+ NONREF/NONEND VALID UU ONLY                          FHPRSMCH
+                                                   OUU0974I CDGRUN 12AUG
+                                                      IRTSMCH
+                                                   XUU0104N RUNMRU 13AUG
+ MRU UU X/RUN UU PAR131.00UU X/RUN UU MRU765.63NUC    IRTSMCH
+ 896.63END ROE46.461353XT47JE500MU128OV1257FR462RE
+ 1827RJ448FR2273IZ908O4672QX
+
+
+ MUR 41660.00               EXCH/
+ MUR    23496 YQ FCI 0
+ MUR     1210 YQ CASH
+ MUR     8522 XT ORIG/
+ MUR 74888.00
+          760 9727383227 4PRI  FFFF
+ 7906/                         7604MUR    41660         0 0050  33228.00

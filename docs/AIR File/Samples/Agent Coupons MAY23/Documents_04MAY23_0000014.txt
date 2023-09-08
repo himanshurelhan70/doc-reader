@@ -1,0 +1,91 @@
+1240GM ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ EMIRATES                     1 OF 1   T9ZAA6/1A   OEK0702U MRUDXB 18JUL
+ PLANTEAU DE MAROUSSEM/MARIE     TC                   UEEESMU1
+ ODILE MRS A                              04MAY23  XEK0243U DXBYUL 19JUL
+ NON-END/FLEX -BG EK                                  UEEESMU1
+                                                   OEK0244U YULDXB 10AUG
+                                                      UEEESMU1
+                                                   XEK0703U DXBMRU 11AUG
+ MRU EK X/DXB EK YMQ570.36EK X/DXB EK MRU570.36NUC    UEEESMU1
+ 1140.72END ROE46.461353XT1000MU880OV878F6126ZR878
+ CA60XG119XQ1186SQ
+
+
+ MUR 53000.00               EXCH/
+ MUR    23478 YQ FCI 0
+ MUR       46 JE CAXXXXXXXXXXXX9328
+ MUR     5127 XT ORIG/
+ MUR 81651.00
+          176 1236040875 3PRI  FFFF
+ 7906/                         1761MUR        0     53000       28651.00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ETKT                    CREDIT CARD CHARGE FORM
+ EMIRATES                           MRU/MRU       ARCADIA TRAVEL
+ PLANTEAU DE MAROUSSEM/MARIE        04MAY23       PORT LOUIS
+ ODILE MRS A                                      52200050    T9ZAA6/1A
+ NON-END/FLEX -BG EK
+
+
+ SIGNATURE X:
+ I ACKNOWLEDGE PURCHASE OF TRANSPORTATION RELATED SERVICES AND/OR
+ GOODS AND AM AWARE OF APPLICABLE RESTRICTIONS AND/OR PENALTIES
+ ASSOCIATED WITH THE PURCHASE AS SHOWN ON THIS RECEIPT
+
+
+  MUR 53000.00
+
+  MUR    23478 YQ
+  MUR       46 JE
+  MUR     5127 XT
+  MUR 81651.00   790/    176 1236040875 3
+
+  CAXXXXXXXXXXXX9328  0923       APVL S218365   PAYMENT:MUR 81651

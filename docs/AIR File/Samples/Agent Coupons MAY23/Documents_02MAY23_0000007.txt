@@ -1,0 +1,21 @@
+1252AG ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR FRANCE                   1 OF 1   QZSO83/1A   OAF0473H MRUCDG 23JUN
+ MAHE/WARREN STEPHANE GEORGES    TCMUINTER            HI5CP1SZ
+ MR A                                     02MAY23  XAF9464K CDGRNS 24JUN
+ CORPORATE/NON ENDO/ INTERGRAPH 034837                HI5CP1SZ
+                                                   OAF9467W RNSCDG 22JUL
+                                                      UI4CP1SZ
+                                                   XAF7964U CDGMRU 22JUL
+ MRU AF X/PAR AF RNS M/IT AF X/PAR AF MRU M/IT END    UI4CP1SZ
+  XT12154YR46JE1000MU881OV450FR1358FR229IZ152O4881
+ QW1026QX
+
+
+ MUR 46395.00               EXCH/
+ MUR     1722 YQ FCI N
+ MUR      507 YR CASH
+ MUR    18177 XT ORIG/
+ MUR 66801.00
+          057 1236040848 4PRI  FFFF
+ 7906/                         0571IT     46395         0       20406.00

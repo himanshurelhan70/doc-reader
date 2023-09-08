@@ -1,0 +1,21 @@
+1288GS ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ CONDOR                       1 OF 1   K84496/1A   ODE2315E MRUFRA 07AUG
+ SEEBARUTH/MOHAMMUD RAYHAAN MR   TC                   ERA
+ A                                        26MAY23  XLX1087M FRAGVA 07AUG
+ FARE RESTRICTIONS APPLY                              ERA
+                                                   OLX1082V GVAFRA 30AUG
+                                                      TRA
+                                                   XDE2314T FRAMRU 30AUG
+ MRU DE X/FRA LX GVA M434.71LX X/FRA DE MRU M359.3    TRA
+ 8NUC794.09END ROE46.461353XT1000MU873OV502DE2362R
+ A1610CH
+
+
+ MUR 36895.00               EXCH/
+ MUR      754 YR FCI 0
+ MUR       47 JE CASH
+ MUR     6347 XT ORIG/
+ MUR 44043.00
+          881 9727383280 2PRI  FFFF
+ 7906/                         8816MUR    36895         0        7148.00

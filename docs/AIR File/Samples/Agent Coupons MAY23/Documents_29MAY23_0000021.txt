@@ -1,0 +1,21 @@
+1240GM ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ TURKISH AIRLINES             1 OF 1   W5TTIZ/1A   OTK1806A TLSIST 11JUL
+ COMBARIEU/MAUD HELENE MRS A     TC                   AN2XEX
+                                          29MAY23  XTK0176A ISTMRU 12JUL
+ NONEND/TK ONLY BR50.09029816                         AN2XEX
+                                                   OTK0177T MRUIST 17JUL
+                                                      TN2XPB
+                                                   XTK1805T ISTTLS 18JUL
+ TLS TK X/IST TK MRU641.14TK X/IST TK TLS345.10NUC    TN2XPB
+ 986.24END ROE0.917107XT47JE1000MU872OV445FR436FR2
+ 26IZ151O4581QX152M6502TR
+
+
+ EUR   905.00  MUR    45335 EXCH/
+ MUR    19436 YR FCI 0
+ MUR     1634 HH CASH
+ MUR     4412 XT ORIG/
+ MUR 70817.00
+          235 9727383323 2PRI  FFFF
+ 7906/                         2354MUR    45335         0 0500  25482.00

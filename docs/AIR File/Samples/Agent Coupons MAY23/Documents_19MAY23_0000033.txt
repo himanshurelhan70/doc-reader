@@ -1,0 +1,21 @@
+1252AG ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR AUSTRAL                  1 OF 1   NB2TCZ/1A   OUU0109N MRURUN 30JUN
+ LARABI EP GUIDEZ/ANAICK         TC                   FHPRSM
+ HELENE MRS A                             19MAY23  XUU0971F RUNCDG 01JUL
+ NONREF/NONEND VALID UU ONLY                          FHPRSM
+                                                   OUU0974I CDGRUN 12AUG
+                                                      IRTSM
+                                                   XUU0104N RUNMRU 13AUG
+ MRU UU X/RUN UU PAR195.53UU X/RUN UU MRU1020.84NU    IRTSM
+ C1216.37END ROE46.461353XT47JE1000MU247OV1257FR46
+ 2RE1827RJ448FR2273IZ908O4672QX
+
+
+ MUR 56515.00               EXCH/
+ MUR    23496 YQ FCI 0
+ MUR     1210 YQ CASH
+ MUR     9141 XT ORIG/
+ MUR 90362.00
+          760 9727383228 5PRI  FFFF
+ 7906/                         7604MUR    56515         0 0050  33847.00

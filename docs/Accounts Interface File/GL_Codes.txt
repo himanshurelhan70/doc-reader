@@ -1,0 +1,102 @@
+General_Ledger_Account_Code                     GL_Analysis_Code_Level_7                        GL_Analysis_Code_Level_8                                GL_Analysis_Code_Level_9                                        VAT_Code
+50042               ATK AF              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042                           50042   ZER
+50042               ATK MK              ZER
+50042               TTX TAX             ZER
+50042                                   ZER
+25042               NULL        50042   ZER
+50042               ATK EK              ZER
+50042               TTX TAX             ZER
+50042                                   ZER
+25042               PHMT        50042   ZER
+50042               INS MEI             ZER
+25042               PHMT        50042   ZER
+50042               INS MEI             ZER
+25042               PHMT        50042   STD
+50042               ATK KQ              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               PHMTHTO     50042   ZER
+50042               HTO SIN             ZER
+25042               PHMTHTO     50042   ZER
+50042               HTO SIN             ZER
+25042               PHMT        50042   STD
+50042               ATK KQ              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               PHMTHTO     50042   ZER
+50042               HTO SIN             ZER
+25042               PHMT        50042   ZER
+50042               INS MEI             ZER
+25042               PHMT        50042   STD
+50042               ATK MK              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               SHLD        50042   ZER
+50042               ATK EP              ZER
+25042               SHLD        50042   STD
+50042               ATK MK              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK AF              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK MK              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK MK              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK HR              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK HR              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK MK              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK HR              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK HR              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               NULL        50042   STD
+50042               ATK MK              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               HOAS        50042   STD
+50042               ATK UU              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD
+25042               HOAS        50042   STD
+50042               ATK TK              ZER
+50042               TTX TAX             ZER
+62121               ATK                 STD
+26060092                                STD

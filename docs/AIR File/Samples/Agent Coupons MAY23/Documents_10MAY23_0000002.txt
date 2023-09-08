@@ -1,0 +1,21 @@
+1288GS ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ EMIRATES                     1 OF 1   W9VIWN/1A   OEK0303B PVGDXB 16MAY
+ XIA/BING A                      TC                   BLXESCN1
+                                          10MAY23  XEK0703B DXBMRU 16MAY
+ NON-END/FLEX BR6.71845101                            BLXESCN1
+                                                   OEK0704Y MRUDXB 19MAY
+                                                      YLXRFCN1
+                                                   XEK0304Y DXBPVG 20MAY
+ SHA EK X/DXB EK MRU712.93EK X/DXB EK SHA1185.32NU    YLXRFCN1
+ C1898.25END ROE6.879967XT1626HH47JE1000MU892OV605
+ CN886F6128ZR
+
+
+ CNY 13060.00  MUR    87745 EXCH/
+ MUR    16350 YQ FCI 0
+ MUR      471 YQ CASH
+ MUR     5184 XT ORIG/
+ MUR109750.00
+          176 1236040956 0PRI  FFFF
+ 7906/                         1761MUR    87745         0       22005.00

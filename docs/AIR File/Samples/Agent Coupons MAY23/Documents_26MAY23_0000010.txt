@@ -1,0 +1,21 @@
+1239JD ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR AUSTRAL                  1 OF 1   WJCJPK/1A   OUU0103V MRURUN 26JUN
+ PATIENT/JIM JERRY MR A          TC                   VRTFL
+                                          26MAY23  OUU0108V RUNMRU 29JUN
+                                                      VRTFL
+
+
+
+ MRU UU RUN72.15UU MRU72.15NUC144.30END ROE46.4613
+ 53XT1000MU246OV793FR445FR227IZ151O4230RE771RJ
+
+
+
+ MUR  6705.00               EXCH/
+ MUR     3312 YQ FCI 0
+ MUR       47 JE CASH
+ MUR     3863 XT ORIG/
+ MUR 13927.00
+          760 9727383287 1PRI  FFVV
+ 7906/                         7604MUR     6705         0 0050   7222.00

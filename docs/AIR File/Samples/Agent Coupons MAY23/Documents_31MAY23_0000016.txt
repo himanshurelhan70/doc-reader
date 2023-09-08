@@ -1,0 +1,103 @@
+
+********************** ---------------------------- ********************
+ EMD-239-1888213651 6        EMD AGENT COUPON           1A ELECTRONIC
+                                                        MISCELLANEOUS
+AIR MAURITIUS                        31MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1239 /JDSU
+GUIDEZ/JEAN FRANCOIS MR               PNR QZVFZ3/1A NOT VALID FOR TRAVEL
+AIR TRANSPORTATION                                  ********************
+
+CPN 1 0B5 SEAT
+      NON-REFUNDABLE
+      ICW: 2399727383192C2
+      RMKS: CHARACTERISTICS: E
+
+PAR MK MRU3504MUR3504END
+
+ BR 50.05041379
+
+
+MUR        3504                 CASH
+                           EXCH/
+                           ORIG ISS/
+MUR        3504
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************** ---------------------------- ********************
+ EMD-239-1888213651 6     EMD PASSENGER RECEIPT         1A ELECTRONIC
+                                                        MISCELLANEOUS
+AIR MAURITIUS                        31MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1239 /JDSU
+GUIDEZ/JEAN FRANCOIS MR               PNR QZVFZ3/1A NOT VALID FOR TRAVEL
+AIR TRANSPORTATION                                  ********************
+
+CPN 1 0B5 SEAT
+      OPERATING CC:MK
+      ORIGIN:CDG
+      DEST:MRU
+      NON-REFUNDABLE
+      ICW: 2399727383192C2
+      RMKS: CHARACTERISTICS: E
+
+PAR MK MRU3504MUR3504END
+
+ BR 50.05041379
+
+
+MUR        3504                 CASH
+                           EXCH/
+                           ORIG ISS/
+MUR        3504
+FOID-
+
+DATA PROTECTION NOTICE: YOUR PERSONAL DATA WILL BE PROCESSED IN
+ACCORDANCE WITH THE APPLICABLE CARRIER'S PRIVACY POLICY AND, IF YOUR
+BOOKING IS MADE VIA A RESERVATION SYSTEM PROVIDER ("GDS"), WITH ITS
+PRIVACY POLICY. THESE ARE AVAILABLE AT
+http://www.iatatravelcenter.com/privacy OR FROM THE CARRIER OR GDS
+DIRECTLY. YOU SHOULD READ THIS DOCUMENTATION, WHICH APPLIES TO YOUR
+BOOKING AND SPECIFIES, FOR EXAMPLE, HOW YOUR PERSONAL DATA IS COLLECTED,
+STORED, USED, DISCLOSED AND TRANSFERRED. (APPLICABLE FOR INTERLINE
+CARRIAGE)

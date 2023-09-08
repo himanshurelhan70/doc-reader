@@ -1,0 +1,21 @@
+1240GM ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   VOKIKL/1A   OMK0748O MRUBOM 02JUN
+ RAMCHURN/KESHIKA MS A           TCIT                 OEEUKMUR
+                                          30MAY23  XUK0821N BOMMAA 03JUN
+ VALID MK/UK ONLY NON END/NON RER                     OEEUKMUR
+                                                   OUK0824W MAABOM 11JUN
+                                                      OEEUKMUR
+                                                   XMK7749O BOMMRU 12JUN
+ MRU MK X/BOM UK MAA Q77.00 M/IT UK X/BOM Q16.00MK    OEEUKMUR
+  MRU M/IT END ROE46.461353XT92YR47JE1000MU873OV30
+ 1IN662P2
+
+
+ MUR 20705.00               EXCH/
+ MUR    10932 YQ FCI N
+ MUR     1658 YR CASH
+ MUR     2975 XT ORIG/
+ MUR 36270.00
+          239 9727383330 4PRI  FFFF
+ 7906/                         2391IT     20705         0       15565.00

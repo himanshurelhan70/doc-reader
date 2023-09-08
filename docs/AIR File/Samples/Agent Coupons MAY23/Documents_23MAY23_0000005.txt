@@ -1,0 +1,21 @@
+1240GM ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   KT7N9E/1A   OMK0912V MRUDXB 26JUL
+ LEONG SON EP VENNER/DIANE       TC                   VMKEKMUR
+ VERONIQUE MRS A                          23MAY23  XEK0095U DXBFCO 27JUL
+ VALID ON MK/EK ONLY NONEND/NONRER                    VMKEKMUR
+                                                   OEK0096R FCODXB 09AUG
+                                                      VMKEKMUR
+                                                   XMK0913V DXBMRU 10AUG
+ MRU MK X/DXB EK ROM M/IT EK X/DXB Q300.00MK MRU M    VMKEKMUR
+ /IT END ROE46.461353XT47JE1000MU879OV892F6128ZR11
+ 8EX379HB1302IT78MJ162VT
+
+
+ MUR 35440.00               EXCH/
+ MUR    19186 YQ FCI N
+ MUR     1364 YR CASH
+ MUR     4985 XT ORIG/
+ MUR 60975.00
+          239 9727383240 5PRI  FFFF
+ 7906/                         2391IT     35440         0       25535.00

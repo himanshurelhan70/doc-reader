@@ -1,0 +1,21 @@
+1252AG ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ EMIRATES                     1 OF 1   VUHVC3/1A   OEK0704I MRUDXB 17MAY
+ LAI WAN LOONG/ANDRE YOUNG MR    TCZZMCU2ZZ           IEEESMU1/MCU2
+ A                                        09MAY23  XEK0015I DXBLGW 18MAY
+ NON-END/FLEX                                         IEEESMU1/MCU2
+                                                   ARUNK
+
+                                                   OEK0006I LHRDXB 29MAY
+ MRU EK X/DXB EK LON1353.15EK X/DXB EK MRU1353.15N    IEEESMU1/MCU2
+ UC2706.30END ROE46.461353XT1000MU887OV882F6126ZR1 XEK0703I DXBMRU 30MAY
+ 1689GB3338UB                                         IEEESMU1/MCU2
+
+
+ MUR125740.00               EXCH/
+ MUR    72262 YQ FCI N
+ MUR       93 JE CASH
+ MUR    17922 XT ORIG/
+ MUR216017.00
+          176 1236040952 3PRI  FFVF/FVVV
+ 7906/    176 1236040953 4 CNJ 1761NR    125740         0       90277.00

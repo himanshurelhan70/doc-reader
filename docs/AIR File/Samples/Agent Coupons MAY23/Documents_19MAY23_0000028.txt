@@ -1,0 +1,21 @@
+1288GS ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   PYEEUM/1A   OMK0440L MRUPER 28NOV
+ JETSHAN/SATYA RAY C             TCXXILCA             LAMUAU1 /CH
+                                          19MAY23  OMH0126K PERKUL 12DEC
+ VALID ON MK ONLY NONEND/NON RER                      XABMUR2 /CH
+                                                   XMK0647X KULMRU 12DEC
+                                                      XABMUR2 /CH
+
+ MRU MK PER223.20MH X/KUL MK MRU366.15NUC589.35END
+  ROE46.461353XT47JE500MU478OV222WG1216WY
+
+
+
+ MUR 27385.00               EXCH/
+ MUR    11143 YQ FCI Q
+ MUR     1362 YR CASH
+ MUR     2463 XT ORIG/
+ MUR 42353.00
+          239 9727383223 2PRI  FFFV
+ 7906/                         2391MUR    27385         0       14968.00

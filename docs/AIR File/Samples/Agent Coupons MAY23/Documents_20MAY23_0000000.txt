@@ -1,0 +1,103 @@
+
+********************** ---------------------------- ********************
+ EMD-239-1888213282 1        EMD AGENT COUPON           1A ELECTRONIC
+                                                        MISCELLANEOUS
+AIR MAURITIUS                        20MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1288 /GSSU
+DE LA HOGUE/ARTHUR MR                 PNR LWJL3M/1A NOT VALID FOR TRAVEL
+AIR TRANSPORTATION                                  ********************
+
+CPN 1 0B5 SEAT
+      NON-REFUNDABLE
+      ICW: 2399727383211C1
+      RMKS: CHARACTERISTICS: O
+
+MRU MK JNB635MUR635END
+
+
+
+
+MUR         635                 CASH
+                           EXCH/
+                           ORIG ISS/
+MUR         635
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************** ---------------------------- ********************
+ EMD-239-1888213282 1     EMD PASSENGER RECEIPT         1A ELECTRONIC
+                                                        MISCELLANEOUS
+AIR MAURITIUS                        20MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1288 /GSSU
+DE LA HOGUE/ARTHUR MR                 PNR LWJL3M/1A NOT VALID FOR TRAVEL
+AIR TRANSPORTATION                                  ********************
+
+CPN 1 0B5 SEAT
+      OPERATING CC:MK
+      ORIGIN:MRU
+      DEST:JNB
+      NON-REFUNDABLE
+      ICW: 2399727383211C1
+      RMKS: CHARACTERISTICS: O
+
+MRU MK JNB635MUR635END
+
+
+
+
+MUR         635                 CASH
+                           EXCH/
+                           ORIG ISS/
+MUR         635
+FOID-
+
+DATA PROTECTION NOTICE: YOUR PERSONAL DATA WILL BE PROCESSED IN
+ACCORDANCE WITH THE APPLICABLE CARRIER'S PRIVACY POLICY AND, IF YOUR
+BOOKING IS MADE VIA A RESERVATION SYSTEM PROVIDER ("GDS"), WITH ITS
+PRIVACY POLICY. THESE ARE AVAILABLE AT
+http://www.iatatravelcenter.com/privacy OR FROM THE CARRIER OR GDS
+DIRECTLY. YOU SHOULD READ THIS DOCUMENTATION, WHICH APPLIES TO YOUR
+BOOKING AND SPECIFIES, FOR EXAMPLE, HOW YOUR PERSONAL DATA IS COLLECTED,
+STORED, USED, DISCLOSED AND TRANSFERRED. (APPLICABLE FOR INTERLINE
+CARRIAGE)

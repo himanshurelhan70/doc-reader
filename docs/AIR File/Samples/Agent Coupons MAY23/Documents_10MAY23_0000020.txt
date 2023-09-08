@@ -1,0 +1,21 @@
+1288GS ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   TLBN5L/1A   OMK0014V MRUCDG 31JUL
+ SOPHIE/VEEMA A                  TCXXILCA             VHXMUMKR
+                                          10MAY23  XAF7366K CDGLYS 01AUG
+ VALID ON MK/AF NON END/NON RER/NON REF               VHXMUMKR
+                                                   OMK9055T LYSCDG 14AUG
+                                                      THXMUAFR
+                                                   XMK0933T CDGMRU 14AUG
+ MRU MK X/PAR AF LYS400.70MK X/PAR MK MRU581.34NUC    THXMUAFR
+ 982.04END ROE46.461353XT52YR47JE1000MU892OV455FR9
+ 62FR231IZ154O41099QW1052QX
+
+
+ MUR 45630.00               EXCH/
+ MUR    12294 YQ FCI Q
+ MUR     1333 YQ CASH
+ MUR     5944 XT ORIG/
+ MUR 65201.00
+          239 1236040973 3PRI  FFFF
+ 7906/                         2391MUR    45630         0       19571.00

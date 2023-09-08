@@ -1,0 +1,21 @@
+1239JD ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR FRANCE                   1 OF 1   PX3MB4/1A   OAF1666F CDGFLR 12JUN
+ GOPAUL/KHOUSBOU YOGINI MRS A    TC                   FH50ABST
+                                          18MAY23  ARUNK
+  BR50.57127869
+                                                   OAF1305E FCOCDG 24JUN
+                                                      EH50OBST
+
+ PAR AF FLR279.68/-ROM AF PAR Q5.45 121.57NUC406.7
+ 0END ROE0.917107XT250FR643FR58IZ76O4638QX118EX380
+ HB809IT78MJ162VT
+
+
+ EUR   373.00  MUR    18865 EXCH/
+ MUR     1720 YQ FCI 0
+ MUR      102 YR CASH
+ MUR     3212 XT ORIG/
+ MUR 23899.00
+          057 9727383191 5PRI  FVFV
+ 7906/                         0571MUR    18865         0        5034.00

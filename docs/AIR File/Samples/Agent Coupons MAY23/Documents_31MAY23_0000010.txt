@@ -1,0 +1,103 @@
+
+********************** ---------------------------- ********************
+ EMD-706-1888213630 5        EMD AGENT COUPON           1A ELECTRONIC
+                                                        MISCELLANEOUS
+KENYA AIRWAYS                        31MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1239 /JDSU
+EGOT/PIERRE MICHEL MR                 PNR L7LR9G/1A NOT VALID FOR TRAVEL
+FINANCIAL IMPACT                                    ********************
+
+CPN 1 99I RESIDUAL VALUE FOR FUTURE AIR TRANSPORTATION
+      PRESENT TO: KENYA AIRWAYS
+      PRESENT AT: MAURITIUS
+      NON-REFUNDABLE
+      ICW: 7069727383341
+      RMKS:
+
+
+
+
+
+
+MUR         395                 CASH
+                           EXCH/ 7061236010747
+                           ORIG ISS/7061236010747MRU02MAR2352200050
+MUR      NO ADC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************** ---------------------------- ********************
+ EMD-706-1888213630 5     EMD PASSENGER RECEIPT         1A ELECTRONIC
+                                                        MISCELLANEOUS
+KENYA AIRWAYS                        31MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1239 /JDSU
+EGOT/PIERRE MICHEL MR                 PNR L7LR9G/1A NOT VALID FOR TRAVEL
+FINANCIAL IMPACT                                    ********************
+
+CPN 1 99I RESIDUAL VALUE FOR FUTURE AIR TRANSPORTATION
+      OPERATING CC:KQ
+      PRESENT TO: KENYA AIRWAYS
+      PRESENT AT: MAURITIUS
+      NON-REFUNDABLE
+      ICW: 7069727383341
+      RMKS:
+
+
+
+
+
+
+MUR         395                 CASH
+                           EXCH/ 7061236010747
+                           ORIG ISS/7061236010747MRU02MAR2352200050
+MUR      NO ADC
+FOID-
+
+DATA PROTECTION NOTICE: YOUR PERSONAL DATA WILL BE PROCESSED IN
+ACCORDANCE WITH THE APPLICABLE CARRIER'S PRIVACY POLICY AND, IF YOUR
+BOOKING IS MADE VIA A RESERVATION SYSTEM PROVIDER ("GDS"), WITH ITS
+PRIVACY POLICY. THESE ARE AVAILABLE AT
+http://www.iatatravelcenter.com/privacy OR FROM THE CARRIER OR GDS
+DIRECTLY. YOU SHOULD READ THIS DOCUMENTATION, WHICH APPLIES TO YOUR
+BOOKING AND SPECIFIES, FOR EXAMPLE, HOW YOUR PERSONAL DATA IS COLLECTED,
+STORED, USED, DISCLOSED AND TRANSFERRED. (APPLICABLE FOR INTERLINE
+CARRIAGE)

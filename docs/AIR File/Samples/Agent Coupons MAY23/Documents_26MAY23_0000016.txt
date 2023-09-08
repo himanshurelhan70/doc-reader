@@ -1,0 +1,21 @@
+1288GS ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ CONDOR                       1 OF 1   KN5P68/1A   ODE2315G MRUFRA 05JUN
+ TIRVENGADUM/NEELOUSHA MS A      TC                   GRA
+                                          26MAY23  XLH1052V FRACDG 05JUN
+ FARE RESTRICTIONS APPLY                              GRA
+                                                   OLH1029S CDGFRA 28JUN
+                                                      URA
+                                                   XDE2314U FRAMRU 28JUN
+ MRU DE X/FRA LH PAR M284.05LH X/FRA DE MRU M316.3    URA
+ 3NUC600.38END ROE46.461353XT1000MU873OV502DE2362R
+ A445FR638FR227IZ151O4619QX
+
+
+ MUR 27895.00               EXCH/
+ MUR      754 YR FCI 0
+ MUR       47 JE CASH
+ MUR     6817 XT ORIG/
+ MUR 35513.00
+          881 9727383293 1PRI  FFFF
+ 7906/                         8816MUR    27895         0        7618.00

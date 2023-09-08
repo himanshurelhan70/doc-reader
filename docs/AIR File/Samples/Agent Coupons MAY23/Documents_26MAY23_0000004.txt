@@ -1,0 +1,21 @@
+1239JD ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR AUSTRAL                  1 OF 1   SQ8R3S/1A   OUU0103Y MRURUN 30MAY
+ ROMBAUT/FRANCOIS MICHEL MR A    TC                   YRTFL
+                                          26MAY23  OUU0108K RUNMRU 02JUN
+                                                      KRTFL
+
+
+
+ MRU UU RUN183.80UU MRU112.72NUC296.52END ROE46.46
+ 1353XT1000MU246OV793FR445FR227IZ151O4230RE771RJ
+
+
+
+ MUR 13780.00               EXCH/
+ MUR     3312 YQ FCI 0
+ MUR       47 JE CASH
+ MUR     3863 XT ORIG/
+ MUR 21002.00
+          760 9727383281 2PRI  FFVV
+ 7906/                         7604MUR    13780         0 0050   7222.00

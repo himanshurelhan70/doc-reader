@@ -1,0 +1,21 @@
+1240GM ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   SURDJH/1A   OMK0288M MRUTNR 13JUN
+ MUNGROO/PEEYUSH S IN            TC                   MAABMUR /IN
+                                          23MAY23  OMK0289M TNRMRU 22JUN
+ VALID MK ONLY NON END/NON RER                        MAABMUR /IN
+
+
+
+ MRU MK TNR6.71MK MRU6.71NUC13.42END ROE46.461353
+
+
+
+
+ MUR   625.00               EXCH/
+ MUR      536 YQ FCI 0
+ MUR       47 JE CASH
+                 ORIG/
+ MUR  1208.00
+          239 9727383242 0PRI  FFVV
+ 7906/                         2391MUR      625         0         583.00

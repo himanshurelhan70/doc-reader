@@ -1,0 +1,21 @@
+1252AG ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR AUSTRAL                  1 OF 1   WF5B6H/1A   OUU0109V MRURUN 12JUN
+ ROBERT/PATRICE GEORGES MAXIME   TC                   VRTFL
+ MR A                                     31MAY23  OUU0104V RUNMRU 14JUN
+                                                      VRTFL
+
+
+
+ MRU UU RUN72.15UU MRU72.15NUC144.30END ROE46.4613
+ 53XT1000MU246OV791FR444FR226IZ151O4229RE769RJ
+
+
+
+ MUR  6705.00               EXCH/
+ MUR     3304 YQ FCI 0
+ MUR       47 JE CASH
+ MUR     3856 XT ORIG/
+ MUR 13912.00
+          760 9727383346 4PRI  FFVV
+ 7906/                         7604MUR     6705         0 0050   7207.00

@@ -1,0 +1,21 @@
+1252AG ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ AIR MAURITIUS                1 OF 1   VOV23A/1A   OMK0014J MRUCDG 30MAY
+ DAVY/JEAN CHARLES MAURICE       TCIT23MK2XXILCA      JACOMUA
+ DANIEL MR A                              29MAY23  XAF9450J CDGNTE 31MAY
+ VALID ON MK/AF NON END/NON RER                       JACOMUA
+                                                   OAF9451J NTECDG 03JUN
+                                                      IACOMUA
+                                                   XMK0015I CDGMRU 03JUN
+ MRU MK X/PAR AF NTE M/IT AF X/PAR MK MRU M/IT END    IACOMUA
+  PD XT975FR2258IZ93JE1000MU872OV902O4917QW1015QX1
+ 7032YQ2907YQ100YR
+
+
+ MUR156145.00               EXCH/2391236040950
+ MUR        1 JE FCI N
+ PD       445 FR CASH CASH
+ PD     28071 XT ORIG/2391236040950MRU09MAY2352200050
+ MUR     1.00
+          239 9727383306 1PRI  FFFF
+ 7906/                         2391IT         0      -487           1.00

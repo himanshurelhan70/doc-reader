@@ -1,0 +1,102 @@
+
+********************** ---------------------------- ********************
+ EMD-760-1888212955 1        EMD AGENT COUPON           1A ELECTRONIC
+                                                        MISCELLANEOUS
+AIR AUSTRAL                          12MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1239 /JDSU
+KINOO/HITESH MR                       PNR TPQHNR/1A NOT VALID FOR TRAVEL
+FINANCIAL IMPACT                                    ********************
+
+CPN 1 99I RESIDUAL VALUE FOR TRANSPORT
+      PRESENT TO: AIR AUSTRAL
+      PRESENT AT: MAURITIUS
+      ICW: 7609727383133
+      RMKS:
+
+
+
+
+
+
+MUR          40                 CASH
+                           EXCH/ 7609727383115
+                           ORIG ISS/7601236040864MRU04MAY2352200050
+MUR      NO ADC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************** ---------------------------- ********************
+ EMD-760-1888212955 1     EMD PASSENGER RECEIPT         1A ELECTRONIC
+                                                        MISCELLANEOUS
+AIR AUSTRAL                          12MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1239 /JDSU
+KINOO/HITESH MR                       PNR TPQHNR/1A NOT VALID FOR TRAVEL
+FINANCIAL IMPACT                                    ********************
+
+CPN 1 99I RESIDUAL VALUE FOR TRANSPORT
+      OPERATING CC:UU
+      PRESENT TO: AIR AUSTRAL
+      PRESENT AT: MAURITIUS
+      ICW: 7609727383133
+      RMKS:
+
+
+
+
+
+
+MUR          40                 CASH
+                           EXCH/ 7609727383115
+                           ORIG ISS/7601236040864MRU04MAY2352200050
+MUR      NO ADC
+FOID-
+
+DATA PROTECTION NOTICE: YOUR PERSONAL DATA WILL BE PROCESSED IN
+ACCORDANCE WITH THE APPLICABLE CARRIER'S PRIVACY POLICY AND, IF YOUR
+BOOKING IS MADE VIA A RESERVATION SYSTEM PROVIDER ("GDS"), WITH ITS
+PRIVACY POLICY. THESE ARE AVAILABLE AT
+http://www.iatatravelcenter.com/privacy OR FROM THE CARRIER OR GDS
+DIRECTLY. YOU SHOULD READ THIS DOCUMENTATION, WHICH APPLIES TO YOUR
+BOOKING AND SPECIFIES, FOR EXAMPLE, HOW YOUR PERSONAL DATA IS COLLECTED,
+STORED, USED, DISCLOSED AND TRANSFERRED. (APPLICABLE FOR INTERLINE
+CARRIAGE)

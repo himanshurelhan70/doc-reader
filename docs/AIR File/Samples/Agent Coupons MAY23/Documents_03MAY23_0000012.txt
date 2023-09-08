@@ -1,0 +1,18 @@
+AUTOMATED REFUND 176 1888212333 4        INT        ARCADIA TRAVEL
+AIRLINE EMIRATES                        03MAY23     JOHN KENNEDY STREET
+PASSENGER NAME  ABDUL CARRIM/MUHAMMAD NADEEM        PORT LOUIS        MU
+                                                    52200050
+CURRENCY MUR  COMM
+FARE PAID        457                 REFUNDED   176 1888212333 1
+FARE USED          0                 DOCUMENTS
+FARE RFND        457
+CANX FEE        0.00
+TAX RFND
+CASH             457
+CREDIT             0
+TAX1               TAX6                ORIG ISS 1761236031473
+TAX2               TAX7                CARD NUMBER
+TAX3               TAX8
+TAX4               TAX9
+TAX5               TAX10               AIRLINE AUTH 01769800296687
+REMARKS  FOR REFUND

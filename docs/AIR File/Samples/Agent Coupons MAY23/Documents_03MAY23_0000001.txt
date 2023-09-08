@@ -1,0 +1,102 @@
+
+********************** ---------------------------- ********************
+ EMD-176-1888212567 0        EMD AGENT COUPON           1A ELECTRONIC
+                                                        MISCELLANEOUS
+EMIRATES                             03MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1288 /GSSU
+NEISIUS/LIINAA KAREENA                PNR TIHIDO/1A NOT VALID FOR TRAVEL
+FINANCIAL IMPACT                                    ********************
+
+CPN 1 996 REFUNDABLE BALANCE
+      PRESENT TO: EMIRATES
+      PRESENT AT: MAURITIUS
+      ICW: 1761236040850
+      RMKS:
+
+
+
+
+
+
+MUR         115                 CASH
+                           EXCH/ 1761236040812
+                           ORIG ISS/1761236040812MRU28APR2352200050
+MUR      NO ADC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************** ---------------------------- ********************
+ EMD-176-1888212567 0     EMD PASSENGER RECEIPT         1A ELECTRONIC
+                                                        MISCELLANEOUS
+EMIRATES                             03MAY23     MU       DOCUMENT
+ARCADIA TRAVEL             52200050 7906 1288 /GSSU
+NEISIUS/LIINAA KAREENA                PNR TIHIDO/1A NOT VALID FOR TRAVEL
+FINANCIAL IMPACT                                    ********************
+
+CPN 1 996 REFUNDABLE BALANCE
+      OPERATING CC:EK
+      PRESENT TO: EMIRATES
+      PRESENT AT: MAURITIUS
+      ICW: 1761236040850
+      RMKS:
+
+
+
+
+
+
+MUR         115                 CASH
+                           EXCH/ 1761236040812
+                           ORIG ISS/1761236040812MRU28APR2352200050
+MUR      NO ADC
+FOID-
+
+DATA PROTECTION NOTICE: YOUR PERSONAL DATA WILL BE PROCESSED IN
+ACCORDANCE WITH THE APPLICABLE CARRIER'S PRIVACY POLICY AND, IF YOUR
+BOOKING IS MADE VIA A RESERVATION SYSTEM PROVIDER ("GDS"), WITH ITS
+PRIVACY POLICY. THESE ARE AVAILABLE AT
+http://www.iatatravelcenter.com/privacy OR FROM THE CARRIER OR GDS
+DIRECTLY. YOU SHOULD READ THIS DOCUMENTATION, WHICH APPLIES TO YOUR
+BOOKING AND SPECIFIES, FOR EXAMPLE, HOW YOUR PERSONAL DATA IS COLLECTED,
+STORED, USED, DISCLOSED AND TRANSFERRED. (APPLICABLE FOR INTERLINE
+CARRIAGE)

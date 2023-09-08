@@ -1,0 +1,21 @@
+1288GS ARCADIA TRAVEL
+ ETKT     **AGENT COUPON**              52200050       **ITINERARY**
+ TURKISH AIRLINES             1 OF 1   KQSKI2/1A   OTK0161P MRUIST 15JUL
+ SHEIK CHAN/LEA MISS C           TCCCC35788           PCOORP4CH
+                                          05MAY23  XTK1963P ISTLGW 16JUL
+ NONEND/TK ONLY                                       PCOORP4CH
+                                                   OTK1998W LGWIST 30AUG
+                                                      WCOORP4CH
+                                                   XTK0160W ISTMRU 31AUG
+ MRU TK X/IST TK LON Q MRULON11.25 87.76TK X/IST T    WCOORP4CH
+ K MRU Q LONMRU7.50 67.71NUC174.22END ROE46.461353
+ XT500MU484OV154M6512TR1087UB
+
+
+ MUR  8095.00               EXCH/
+ MUR    18398 YR FCI F
+ MUR       47 JE CASH
+ MUR     2737 XT ORIG/
+ MUR 29277.00
+          235 1236040888 0PRI  FFFF
+ 7906/                         2354MUR     8095         0 0500  21182.00

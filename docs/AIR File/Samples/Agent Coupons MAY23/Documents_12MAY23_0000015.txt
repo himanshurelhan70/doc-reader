@@ -1,0 +1,17 @@
+AUTOMATED REFUND 239 1236002212 1        INT        ARCADIA TRAVEL
+AIRLINE AIR MAURITIUS                   12MAY23     JOHN KENNEDY STREET
+PASSENGER NAME  LAGESSE/PALOMA MS                   PORT LOUIS        MU
+                                                    52200050
+CURRENCY MUR  COMM 0.00                  TOUR CODE  XXILCA
+FARE PAID       6770                 REFUNDED   239 1236002212 12
+FARE USED          0                 DOCUMENTS
+FARE RFND       6770
+CANX FEE         500
+TAX RFND        8304
+CASH           14574
+CREDIT             0
+TAX1      3296YQ   TAX6       739FR
+TAX2      1298YR   TAX7       425FR    CARD NUMBER
+TAX3        47JE   TAX8       226IZ
+TAX4      1000MU   TAX9       150O4
+TAX5       221OV   TAX10      902XT    AIRLINE AUTH  239M210QJRJC4
