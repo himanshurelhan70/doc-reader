@@ -1,0 +1,43 @@
+record = zoho.crm.getRecordById("Custom",customId);
+startDate = record.get("Start_Date").toDate();
+endDate = record.get("End_Date").toDate();
+info "startDate -->" + startDate;
+info "endDate -->" + endDate;
+// ///
+filteredInvoice = List();
+invoices = zoho.crm.getRecords("Invoices");
+//
+for each  invoice in invoices
+{
+	invoiceDate = invoice.get("Created_Time").toDate();
+	//
+	// 	info invoice;
+	if(invoiceDate >= startDate && invoiceDate <= endDate)
+	{
+		products = invoice.get("Product_Details");
+		finalProducts = List();
+		///
+		for each  product in products
+		{
+			newMap = Map();
+			productId = product.get("product").get("id");
+			productDetails = zoho.crm.getRecordById("Products",productId);
+			newMap.put("Product_Name",productDetails.get("Product_Name"));
+			newMap.put("General_Ledger_Account_Code",productDetails.get("General_Ledger_Account_Code"));
+			newMap.put("GL_Analysis_Code_Level_8",productDetails.get("GL_Analysis_Code_Level_8"));
+			newMap.put("GL_Analysis_Code_Level_9",productDetails.get("GL_Analysis_Code_Level_9"));
+			finalProducts.add(newMap);
+		}
+		invoice.put("finalProducts",finalProducts);
+// 		info "invoice" + invoice;
+		filteredInvoice.add(invoice);
+	}
+	else
+	{
+		info "Invoice is not in selected range";
+	}
+}
+info "filteredInvoice -->" + filteredInvoice;
+// products = zoho.crm.getRecords("Products");
+// info "products -->" + products;
+return "Successfully Generated Interface File";

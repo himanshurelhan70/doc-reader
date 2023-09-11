@@ -141,7 +141,11 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         console.log("Exchange Rate ->", exchangeRate);
        
         /////
-        const murAmount = baseAmount * exchangeRate;
+        let murAmount = baseAmount;
+        if(exchangeRate !== null){
+            murAmount = baseAmount * exchangeRate;
+        }
+
         console.log("murAmount ->", murAmount);
 
         //Tax
@@ -216,7 +220,11 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             Fair: Fair,
             TaxesAndNames: TaxesAndNames,
             Total_Tax: Total_Tax,
-            Email: Email
+            Email: Email,
+            baseCurrency: baseCurrency,
+            baseAmount: baseAmount,
+            exchangeRate: exchangeRate,
+            murAmount: murAmount
         };
 
         // Routing
@@ -298,6 +306,9 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         });
     }
 });
+
+
+
 
 app.listen(PORT, () => {
     console.log('server is running');
