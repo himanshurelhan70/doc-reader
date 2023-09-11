@@ -1,46 +1,53 @@
-void callBackend(string id)
+void test(string id, string name)
 {
 /////////////// Calling our backend API that will read the file
 response = invokeurl
 [
-	url :"https://doc-reader-xr10.onrender.com/uploadFile/" + id
+	url :"https://doc-reader-v3rr.onrender.com/uploadFile/" + id
 	type :POST
 ];
 ///////////
 info "FileData --> " + response;
-// 	
-// 
+//// 	
+// ///
 // extracting values from data
 data = response.getJSON("data");
 Passenger = data.getJSON("Passenger");
 Ticket_Number = data.getJSON("Ticket_Number");
 Airline = data.getJSON("Airline");
 Flight_Description = data.getJSON("Flight_Description");
-Fair = data.getJSON("Fair");
+// //// ///Fair = data.getJSON("Fair");
 TaxesAndNames = data.getJSON("TaxesAndNames");
 Total_Tax = data.getJSON("Total_Tax").toString();
 Class = data.getJSON("Class");
 Email = data.getJSON("Email");
+baseCurrency = data.getJSON("baseCurrency");
+baseAmount = data.getJSON("baseAmount");
+exchangeRate = data.getJSON("exchangeRate");
+murAmount = data.getJSON("murAmount");
 H = data.getJSON("H");
-// 
+info "-->" + baseCurrency + "-->" + baseAmount + "-->" + exchangeRate + "-->" + murAmount;
 //
-// Adding all the extracted value to a map()
+// /// //
+///// // Adding all the extracted value to a map()
 newData = Map();
 newData.put("Name",Ticket_Number);
 newData.put("Passenger",Passenger);
-newData.put("Ticket_Number",Ticket_Number);
-newData.put("Reservation_Number",Ticket_Number);
 newData.put("Airline",Airline);
 newData.put("Flight_Description",Flight_Description);
-newData.put("Fair",Fair);
+// ////////////////newData.put("Fair",Fair);
 newData.put("Total_Tax",Total_Tax);
 newData.put("Class",Class);
-newData.put("Email",Email);
-//////////////////
-//// Adding values in a List for a subform
+newData.put("Agent_Email",Email);
+newData.put("Airfile_Name",name);
+newData.put("Base_Currency",baseCurrency.toString());
+newData.put("Base_Fare",baseAmount.toString());
+newData.put("Exchange_Rate1",exchangeRate.toString());
+newData.put("MUR_Amount",murAmount.toString());
+// //////////////////
+// ////// Adding values in a List for a subform
 subForm = List();
 H = data.getJSON("H");
-// info "H ----> " + H;
 for each  item in H
 {
 	subFormData = Map();
@@ -49,7 +56,7 @@ for each  item in H
 }
 newData.put("Flight_Routing",subForm);
 ////////////////
-////
+///////
 subForm2 = List();
 for each  tax in TaxesAndNames
 {
@@ -60,11 +67,11 @@ for each  tax in TaxesAndNames
 	subForm2.add(subFormData);
 }
 newData.put("Ticket_Tax",subForm2);
-//// creating a new record
+///////// creating a new record
 info "newData ----->" + newData;
 Airtickets = zoho.crm.createRecord("Airtickets",newData,{"trigger":{"workflow"}});
 info Airtickets;
-// moving file to subfolder
+///////// moving file to subfolder
 if(response.getJSON("success") == true)
 {
 	header = Map();
@@ -86,4 +93,5 @@ if(response.getJSON("success") == true)
 	];
 	info response;
 }
+///////
 }

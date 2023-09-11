@@ -131,7 +131,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
 
         if (match && match[1]) {
             const conversionRate = parseFloat(match[1]);
-            return conversionRate;
+            return conversionRate.toFixed(2);
         } else {
             return null;
         }
@@ -143,7 +143,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         /////
         let murAmount = baseAmount;
         if(exchangeRate !== null){
-            murAmount = baseAmount * exchangeRate;
+            murAmount = (baseAmount * exchangeRate).toFixed(2);
         }
 
         console.log("murAmount ->", murAmount);
