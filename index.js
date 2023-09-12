@@ -5,6 +5,9 @@ const cors = require("cors");
 const fs = require("fs");
 const axios = require("axios");
 
+//controllers
+const {createInterface} = require("./controllers/createInterface");
+
 // zoho access token 
 const { getAccessToken } = require("./accessToken");
 let access_token = "";
@@ -35,7 +38,7 @@ const getZohoAccessToken = async () => {
         console.log("error while generating access Token");
     }
 }
-
+//////////////////
 app.post("/uploadFile/:fileId", async (req, res) => {
     try {
         const { fileId } = req.params;
@@ -306,6 +309,9 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         });
     }
 });
+/////////////////////
+
+app.post("/createInterface", createInterface);
 
 
 

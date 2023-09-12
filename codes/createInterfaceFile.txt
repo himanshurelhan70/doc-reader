@@ -38,6 +38,9 @@ for each  invoice in invoices
 	}
 }
 info "filteredInvoice -->" + filteredInvoice;
-// products = zoho.crm.getRecords("Products");
+products = zoho.crm.getRecords("Products");
 // info "products -->" + products;
+//// resp = zoho.crm.getRecordById("Invoices","5810070000001418225");
+//// info "response ==" + resp;
+//// info "invoice items ==" + resp.get("invoicea_item");
 return "Successfully Generated Interface File";
