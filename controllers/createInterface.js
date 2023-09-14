@@ -7,35 +7,67 @@ exports.createInterface = (req, res) => {
     const { filteredInvoice, productsInfo } = req.body;
 
     filteredInvoice.forEach(invoice => {
-        fileContent += "H";
-        fileContent += "TL";
-    
-        //Transaction Date
-        const transDateStr = invoice.Created_Time;
-        const transDateObj = new Date(transDateStr);
+        // // H - For Header
+        // fileContent += "H";
 
-        const transDate = String(transDateObj.getDate()).padStart(2, '0') + String(transDateObj.getMonth() + 1).padStart(2, '0') + String(transDateObj.getFullYear());
-        fileContent += transDate;
+        // // Company Code
+        // fileContent += "TL";
 
-        // Document Date
-        const docDateObj = new Date();
-        const docDate = String(docDateObj.getDate()).padStart(2, '0') + String(docDateObj.getMonth() + 1).padStart(2, '0') + String(docDateObj.getFullYear());
-        fileContent += docDate;
+        // // customer code 
+        // const customerCode = "".padEnd(20, ' ');
+        // fileContent += customerCode;
 
-        fileContent += "\n";
-        //////////////
+        // // transaction Type
+        // const isCreditNote = invoice.Credit_Note;
+        // fileContent += isCreditNote ? "CR" : "IN";
+
+        // // Item Reference - ticket number
+        // const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+        // fileContent += invoiceReference;
+
+        // //Reason Code
+        // const reasonCode = "".padEnd(2, ' ');
+        // fileContent += reasonCode;
+
+        // //Transaction Date
+        // const transDateObj = new Date(invoice.Created_Time);
+        // const transDate = String(transDateObj.getDate()).padStart(2, '0') + String(transDateObj.getMonth() + 1).padStart(2, '0') + String(transDateObj.getFullYear());
+        // fileContent += transDate;
+
+        // // Document Date
+        // const docDateObj = new Date();
+        // const docDate = String(docDateObj.getDate()).padStart(2, '0') + String(docDateObj.getMonth() + 1).padStart(2, '0') + String(docDateObj.getFullYear());
+        // fileContent += docDate;
+
+        // fileContent += "\n";
+        ///
+        ////
+        ////////////// Detail Row
         invoice.Product_Details.forEach(product => {
             // Detail Record - D
             fileContent += "D";
 
-            // For Company Code - todo
+            // For Company Code
             fileContent += "TL";
 
-            // transaction Type IN or CR - todo
-            fileContent += "IN";
+            // transaction Type
+            const isCreditNote = invoice.Credit_Note;
+            fileContent += isCreditNote ? "CR" : "IN";
 
+            // Item Reference
+            const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+            fileContent += invoiceReference;
+
+            // Line no - todo
+            const lineNo = "".padEnd(4, ' ');
+            fileContent += lineNo;
+
+            // Line Description - todo
+            const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
+            fileContent += lineDescription;
+
+            // /////////// Finding GL codes of the current product
             const productId = product.product.id;
-            // Finding GL codes of the current product
             const productCodes = productsInfo.find(p => p.id === productId);
 
             // ////////// GL Code
@@ -81,7 +113,7 @@ exports.createInterface = (req, res) => {
             // ////////// Currency Rate 
             fileContent += "100000".padStart(18, ' ');
 
-            // //////////
+            // ////////// todo
             fileContent += "CR";
 
             fileContent += "\n";
