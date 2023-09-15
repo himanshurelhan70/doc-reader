@@ -6,6 +6,9 @@ exports.createInterface = (req, res) => {
 
     const { filteredInvoice, productsInfo } = req.body;
 
+    console.log("files -->", req.files);
+    console.log("req -->", req);
+
     if(!filteredInvoice || !productsInfo){
         console.log("data is empty");
 
@@ -15,8 +18,7 @@ exports.createInterface = (req, res) => {
         })
     }
 
-    console.log("files -->", req.files);
-    console.log("req -->", req);
+   
 
 
     filteredInvoice.forEach(invoice => {
