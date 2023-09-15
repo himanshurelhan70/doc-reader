@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require('path');
 
 // This will create a Interface File after structuring the data
 exports.createInterface = (req, res) => {
@@ -185,7 +186,7 @@ exports.createInterface = (req, res) => {
 
 
     console.log("fileContent ->", fileContent);
-    fs.writeFile("files/interface.txt", fileContent, (err) => {
+    fs.writeFileSync("files/interface.txt", fileContent, (err) => {
         if (err) {
             console.log("Error While creating File", err);
         }
@@ -194,7 +195,27 @@ exports.createInterface = (req, res) => {
         }
     });
 
-    return res.json({
-        success: true
+    
+
+    // Define a route to handle file downloads
+    
+ 
+    const filePath = path.join(__dirname, '../files', 'interface.txt');
+    console.log("__dirname", filePath);
+
+    // Send the file as a response
+    return res.sendFile(filePath,  (err) => {
+        if (err) {
+        console.error('Error sending file:', err);
+        res.status(err.status).end();
+        } else {
+        console.log('File sent successfully');
+        }
     });
+
+    // return res.json({
+    //     success: true,
+    //     message: "Data Received Successfully",
+    //     data: fileContent
+    // });
 }
