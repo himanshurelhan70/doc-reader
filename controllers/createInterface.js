@@ -6,6 +6,18 @@ exports.createInterface = (req, res) => {
 
     const { filteredInvoice, productsInfo } = req.body;
 
+    if(!filteredInvoice || !productsInfo){
+        console.log("data is empty");
+
+        return res.json({
+            success: false,
+            message: "Data is null"
+        })
+    }
+
+    console.log("files -->", req.files);
+    console.log("req -->", req);
+
 
     filteredInvoice.forEach(invoice => {
         //// amounts
