@@ -10,7 +10,7 @@ exports.createInterface = (req, res) => {
     console.log("files -->", req.files);
     console.log("req -->", req);
 
-    if(!filteredInvoice || !productsInfo){
+    if (!filteredInvoice || !productsInfo) {
         console.log("data is empty");
 
         return res.json({
@@ -19,7 +19,7 @@ exports.createInterface = (req, res) => {
         })
     }
 
-   
+
 
 
     filteredInvoice.forEach(invoice => {
@@ -82,7 +82,8 @@ exports.createInterface = (req, res) => {
             //////// base amounts
             const inclVat = product.net_total === 0 ? '0' : product.net_total.toFixed(5).replace('.', '');
             const exclVat = product.total_after_discount === 0 ? '0' : product.total_after_discount.toFixed(5).replace('.', '');
-            const tax = product.Tax === 0 ? '0' : product.Tax.toFixed(5).replace('.', '');
+            // const tax = product.Tax === 0 ? '0' : product.Tax.toFixed(5).replace('.', '');
+            const tax = '0';
 
             detailRows += inclVat.padStart(18, ' ');
             detailRows += exclVat.padStart(18, ' ');
@@ -91,11 +92,12 @@ exports.createInterface = (req, res) => {
             totalIncVat += product.net_total === 0 ? 0 : product.net_total;
             totalExcVat += product.total_after_discount === 0 ? 0 : product.total_after_discount;
             onlyVat += product.Tax === 0 ? 0 : product.Tax;
-            
+
 
             ////////For prime amounts
             detailRows += inclVat.padStart(18, ' ');
             detailRows += exclVat.padStart(18, ' ');
+
             detailRows += tax.padStart(18, ' ');
 
             // ///////////// VAT CODE
@@ -112,8 +114,90 @@ exports.createInterface = (req, res) => {
 
             detailRows += "\n";
 
-            // Checking if it's a Air Ticket then create header and insert it
-            if ((index < products.length - 1 && products[index + 1].product.id == "5810070000000494011") || index == products.length-1) {
+            // ////////////////////////////////////////////////////// For Tax amount Line
+            if (product.Tax) {
+                // Detail Record - D
+                detailRows += "D";
+
+                // For Company Code
+                detailRows += "TL";
+
+                // transaction Type
+                const isCreditNote = invoice.Credit_Note;
+                detailRows += isCreditNote ? "CR" : "IN";
+
+                // Item Reference
+                const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+                detailRows += invoiceReference;
+
+                // Line no - todo
+                const lineNo = "".padEnd(4, ' ');
+                detailRows += lineNo;
+
+                // Line Description - todo
+                const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
+                detailRows += lineDescription;
+
+                // /////////// Finding GL codes of the current product
+                const productId = product.product.id;
+                const productCodes = productsInfo.find(p => p.id === productId);
+
+                // ////////// GL Code
+                // let glCode = productCodes.General_Ledger_Account_Code;
+                const glCode = "26060092".padEnd(20, ' ');
+                detailRows += glCode;
+
+                // ////////// GL Code L7
+                // let glCodeL7 = productCodes.GL_Analysis_Code_Level_7;
+                const glCodeL7 = "".padEnd(4, ' ');
+                detailRows += glCodeL7;
+
+                // ////////// GL Code L8
+                // let glCodeL8 = productCodes.GL_Analysis_Code_Level_8;
+                const glCodeL8 = "".padEnd(8, ' ');
+                detailRows += glCodeL8;
+
+                // ////////// GL Code L9
+                // let glCodeL9 = productCodes.GL_Analysis_Code_Level_9;
+                const glCodeL9 = "".padEnd(8, ' ');
+                detailRows += glCodeL9;
+
+                //////// base amounts
+                const inclVat = product.Tax.toFixed(5).replace('.', '');
+                const exclVat = product.Tax.toFixed(5).replace('.', '');
+                const tax = '0';
+
+                detailRows += inclVat.padStart(18, ' ');
+                detailRows += exclVat.padStart(18, ' ');
+                detailRows += tax.padStart(18, ' ');
+
+                totalIncVat += product.Tax;
+                totalExcVat += product.Tax;
+                onlyVat += 0;
+
+
+                ////////For prime amounts
+                detailRows += inclVat.padStart(18, ' ');
+                detailRows += exclVat.padStart(18, ' ');
+                detailRows += tax.padStart(18, ' ');
+
+                // ///////////// VAT CODE
+                detailRows += productCodes.Tax_Code.trim().padEnd(50, ' ');
+
+                // ///////// Currency Code - MUR
+                detailRows += "MUR".padEnd(10, ' ');
+
+                // ////////// Currency Rate 
+                detailRows += "100000".padStart(18, ' ');
+
+                // ////////// todo
+                detailRows += "CR";
+
+                detailRows += "\n";
+            }
+
+            //////////////////////////////////// Checking if it's a Air Ticket then create header and insert it
+            if ((index < products.length - 1 && products[index + 1].product.id == "5810070000000494011") || index == products.length - 1) {
                 // // H - For Header
                 headerRow += "H";
 
@@ -195,21 +279,21 @@ exports.createInterface = (req, res) => {
         }
     });
 
-    
+
 
     // Define a route to handle file downloads
-    
- 
+
+
     const filePath = path.join(__dirname, '../files', 'interface.txt');
     console.log("__dirname", filePath);
 
     // Send the file as a response
-    return res.sendFile(filePath,  (err) => {
+    return res.sendFile(filePath, (err) => {
         if (err) {
-        console.error('Error sending file:', err);
-        res.status(err.status).end();
+            console.error('Error sending file:', err);
+            res.status(err.status).end();
         } else {
-        console.log('File sent successfully');
+            console.log('File sent successfully');
         }
     });
 
