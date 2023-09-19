@@ -28,6 +28,7 @@ exports.createInterface = (req, res) => {
         let headerRow = "";
         let detailRows = "";
         let doubleEntry = "";
+        let lineNo = 0;
 
 
         ////////////// Detail Row
@@ -46,12 +47,11 @@ exports.createInterface = (req, res) => {
             const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
             detailRows += invoiceReference;
 
-            // Line no - todo
-            const lineNo = "".padEnd(4, ' ');
-            detailRows += lineNo;
+            // Line no 
+            detailRows += lineNo.toString().padStart(4, ' ');
 
             // Line Description - todo
-            const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
+            const lineDescription = invoice.Product_Details[2].product_description ? invoice.Product_Details[2].product_description.padEnd(30, ' ') : "".padEnd(30, ' ');
             detailRows += lineDescription;
 
             // /////////// Finding GL codes of the current product
@@ -130,8 +130,7 @@ exports.createInterface = (req, res) => {
                 detailRows += invoiceReference;
 
                 // Line no - todo
-                const lineNo = "".padEnd(4, ' ');
-                detailRows += lineNo;
+                detailRows += lineNo.toString().padStart(4, ' ');;
 
                 // Line Description - todo
                 const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
@@ -208,9 +207,8 @@ exports.createInterface = (req, res) => {
                     const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
                     doubleEntry += invoiceReference;
 
-                    // Line no - todo
-                    const lineNo = "".padEnd(4, ' ');
-                    doubleEntry += lineNo;
+                    // Line no 
+                    doubleEntry += lineNo.toString().padStart(4, ' ');
 
                     // Line Description - todo
                     const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
@@ -328,6 +326,7 @@ exports.createInterface = (req, res) => {
                 headerRow = "";
                 detailRows = "";
                 doubleEntry = "";
+                lineNo++;
             }
         })
     });

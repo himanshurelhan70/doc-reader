@@ -6,7 +6,7 @@ const fs = require("fs");
 const axios = require("axios");
 
 //controllers
-const {createInterface} = require("./controllers/createInterface");
+const { createInterface } = require("./controllers/createInterface");
 
 // zoho access token 
 const { getAccessToken } = require("./accessToken");
@@ -87,8 +87,9 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         // Ticket Number
         const Ticket_Number_start = data.lastIndexOf("T-K");
         const Ticket_Number_end = data.indexOf("\n", Ticket_Number_start);
-        const Ticket_Number = data.substring(Ticket_Number_start + 3, Ticket_Number_end);
+        const Ticket_Number = data.substring(Ticket_Number_start + 3, Ticket_Number_end).split("-")[1].trim();
         console.log("Ticket_Number-----> " + Ticket_Number);
+
 
         // Date
         const o_start = data.lastIndexOf("O-");
@@ -124,28 +125,28 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             }
         }
 
-        const {baseCurrency, baseAmount} = extractBaseFareAndCurrency(Fair);
+        const { baseCurrency, baseAmount } = extractBaseFareAndCurrency(Fair);
         console.log("Currency ->", baseCurrency, "Base Fair ->", baseAmount);
 
 
         //// exchange Rate
         function extractConversionRate(inputString) {
-        const match = inputString.match(/;([\d.]+)\s*;*$/);
+            const match = inputString.match(/;([\d.]+)\s*;*$/);
 
-        if (match && match[1]) {
-            const conversionRate = parseFloat(match[1]);
-            return conversionRate.toFixed(2);
-        } else {
-            return null;
-        }
+            if (match && match[1]) {
+                const conversionRate = parseFloat(match[1]);
+                return conversionRate.toFixed(2);
+            } else {
+                return null;
+            }
         }
 
         const exchangeRate = extractConversionRate(Fair);
         console.log("Exchange Rate ->", exchangeRate);
-       
+
         /////
         let murAmount = baseAmount;
-        if(exchangeRate !== null){
+        if (exchangeRate !== null) {
             murAmount = (baseAmount * exchangeRate).toFixed(2);
         }
 
