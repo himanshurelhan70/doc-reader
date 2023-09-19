@@ -18,8 +18,6 @@ exports.createInterface = (req, res) => {
     }
 
 
-
-
     filteredInvoice.forEach(invoice => {
         //// amounts
         let totalIncVat = 0;
@@ -33,6 +31,9 @@ exports.createInterface = (req, res) => {
 
         ////////////// Detail Row
         invoice.Product_Details.forEach((product, index, products) => {
+            // utils
+            let headerVatCode = "ZER";
+
             // Detail Record - D
             detailRows += "D";
 
@@ -108,8 +109,22 @@ exports.createInterface = (req, res) => {
             // ////////// Currency Rate 
             detailRows += "100000".padStart(18, ' ');
 
-            // ////////// todo
-            detailRows += "CR";
+            // Invoice:
+            // 50042, 62121, 26060092 - CR
+            // 25042 - DR
+
+            // Credit Note:
+            // 50042, 62121, 26060092 - DR*
+            // 25042 - CR
+            if (!isCreditNote) {
+                let code = glCode.trim();
+                detailRows += (code == 50042 || code == '62121' || code == '26060092') ? "CR" : "DR";
+            }
+            else {
+                let code = glCode.trim();
+                detailRows += (code == 50042 || code == '62121' || code == '26060092') ? "DR" : "CR";
+            }
+
 
             detailRows += "\n";
 
@@ -129,10 +144,10 @@ exports.createInterface = (req, res) => {
                 const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
                 detailRows += invoiceReference;
 
-                // Line no - todo
+                // Line no
                 detailRows += lineNo.toString().padStart(4, ' ');;
 
-                // Line Description - todo
+                // Line Description 
                 const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
                 detailRows += lineDescription;
 
@@ -183,8 +198,15 @@ exports.createInterface = (req, res) => {
                 // ////////// Currency Rate 
                 detailRows += "100000".padStart(18, ' ');
 
-                // ////////// todo
-                detailRows += "CR";
+                // ////////// DR/CR
+                if (!isCreditNote) {
+                    let code = glCode.trim();
+                    detailRows += (code == 50042 || code == '62121' || code == '26060092') ? "CR" : "DR";
+                }
+                else {
+                    let code = glCode.trim();
+                    detailRows += (code == 50042 || code == '62121' || code == '26060092') ? "DR" : "CR";
+                }
 
                 detailRows += "\n";
             }
@@ -210,7 +232,7 @@ exports.createInterface = (req, res) => {
                     // Line no 
                     doubleEntry += lineNo.toString().padStart(4, ' ');
 
-                    // Line Description - todo
+                    // Line Description 
                     const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
                     doubleEntry += lineDescription;
 
@@ -253,8 +275,15 @@ exports.createInterface = (req, res) => {
                     // ////////// Currency Rate 
                     doubleEntry += "100000".padStart(18, ' ');
 
-                    // ////////// todo
-                    doubleEntry += "CR";
+                    // ////////// DR/CR
+                    if (!isCreditNote) {
+                        let code = glCode.trim();
+                        doubleEntry += (code == 50042 || code == '62121' || code == '26060092') ? "CR" : "DR";
+                    }
+                    else {
+                        let code = glCode.trim();
+                        doubleEntry += (code == 50042 || code == '62121' || code == '26060092') ? "DR" : "CR";
+                    }
 
                     doubleEntry += "\n";
                 }

@@ -61,7 +61,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         try {
             const response = await axios(config);
             data = await response.data;
-            // console.log("file Data -->", data);
+            console.log("file Data -->", data);
         }
         catch (err) {
             console.log("Error while downloading file");
@@ -69,7 +69,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             return res.status(400).json({
                 success: false,
                 message: "Error while downloading file"
-            })
+            });
         }
 
         // Airline
@@ -77,6 +77,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         const Airline_end = data.indexOf(";", Airline_start);
         const Airline = data.substring(Airline_start + 2, Airline_end);
         console.log("Airline -----> " + Airline);
+
 
         // Passenger
         const Passenger_start = data.lastIndexOf("I-");
