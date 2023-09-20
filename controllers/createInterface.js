@@ -27,12 +27,10 @@ exports.createInterface = (req, res) => {
         let detailRows = "";
         let doubleEntry = "";
         let lineNo = 0;
-
+        let headerVatCode = "ZER";
 
         ////////////// Detail Row
         invoice.Product_Details.forEach((product, index, products) => {
-            // utils
-            let headerVatCode = "ZER";
 
             // Detail Record - D
             detailRows += "D";
@@ -51,7 +49,7 @@ exports.createInterface = (req, res) => {
             // Line no 
             detailRows += lineNo.toString().padStart(4, ' ');
 
-            // Line Description - todo
+            // Line Description -
             const lineDescription = invoice.Product_Details[2].product_description ? invoice.Product_Details[2].product_description.padEnd(30, ' ') : "".padEnd(30, ' ');
             detailRows += lineDescription;
 
@@ -102,6 +100,9 @@ exports.createInterface = (req, res) => {
 
             // ///////////// VAT CODE
             detailRows += productCodes.Tax_Code.trim().padEnd(50, ' ');
+            if(productCodes.Tax_Code == "STD"){
+                headerVatCode = "STD";
+            }
 
             // ///////// Currency Code - MUR
             detailRows += "MUR".padEnd(10, ' ');
@@ -334,7 +335,11 @@ exports.createInterface = (req, res) => {
                     headerRow += onlyVat.toFixed(5).replace('.', '').padStart(18, ' ');
 
                     // posting Period
-                    headerRow += "".padStart(5, ' ');
+                    transDateObj.setMonth(transDateObj.getMonth() + 7);
+                    const postingYear = transDateObj.getFullYear().toString().substring(2);
+                    const postingMonth = transDateObj.getMonth() < 10 ? `0${transDateObj.getMonth()}` : `${transDateObj.getMonth()}`;
+                    const postingPeriod = `1${postingYear}${postingMonth}`;
+                    headerRow += postingPeriod.padStart(5, ' ');
 
                     // Description - Invoice/Credit Note
                     headerRow += (invoice.Credit_Note ? "Credit Note" : "Invoice").padEnd(15, ' ');
@@ -346,7 +351,8 @@ exports.createInterface = (req, res) => {
                     headerRow += "100000".padStart(18, ' ');
 
                     // VAT Code
-                    headerRow += "STD".padEnd(50, ' ');
+                    headerRow += headerVatCode.padEnd(50, ' ');
+
 
                     headerRow += "\n";
                 }
@@ -356,6 +362,7 @@ exports.createInterface = (req, res) => {
                 detailRows = "";
                 doubleEntry = "";
                 lineNo++;
+                headerVatCode = "ZER";
             }
         })
     });
