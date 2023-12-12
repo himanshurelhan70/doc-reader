@@ -99,7 +99,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         console.log("O-----> " + O);
 
 
-        const dateMatch = O.match(/(\d{2}[A-Z]{3}\d{2})/);
+        const dateMatch = O.match(/(\d{2}[A-Z]{3}\d{2})/) ? O.match(/(\d{2}[A-Z]{3}\d{2})/) : ["", ""];
         const dateString = dateMatch[1];
         console.log("dateString  ---->", dateString);
 

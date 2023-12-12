@@ -1,35 +1,6 @@
-// // Get the recently created ticket record
-// ticket = zoho.crm.getRecordById("Airtickets",id);
-// name = ticket.get("Name");
-// ticketId = ticket.get("id").toLong();
-// Airline = ticket.get("Airline");
-// Passenger = ticket.get("Passenger");
-// Ticket_Number = ticket.get("Ticket_Number");
-// Flight_Description = ticket.get("Flight_Description");
-// Ticket_Number = ticket.get("Ticket_Number");
-// Fair = ticket.get("Fair");
-// TAX = ticket.get("TAX");
-// Total_Tax = ticket.get("Total_Tax");
-// Class = ticket.get("Class");
-// Email = ticket.get("Email");
-// // ////////////// finding existing Deal
-// isExist = zoho.crm.searchRecords("Deals","(Email:equals:" + Email + ")");
-// // create a deal if not exists
-// if(isEmpty(isExist))
-// {
-// 	newDeal = Map();
-// 	newDeal.put("Deal_Name",name);
-// 	newDeal.put("Email",Email);
-// 	newDeal.put("Stage","New Request");
-// 	newDeal.put("Subform_2",{{"Airline_1":Airline,"Passenger2":Passenger,"Class_1":Class,"Fair_1":Fair,"Lookup_1":{"name":Ticket_Number,"id":id}}});
-// 	// 
-// 	existingDeal = zoho.crm.createRecord("Deals",newDeal,{"trigger":{"workflow"}});
-// 	info "New Lead Created" + existingDeal;
-// }
-// // append a row if already exist
-// else
-// {
-// 	dealId = isExist.getJSON("id");
-// 	list = List();
-// 	info "id --->" + dealId;
-// }
+How to create Custom object/Table
+How to add Custom Fields/Columns
+How to create Custom object Tab/Module to show the Records
+How to Create a Custom App
+
+How to create CRUD a record
