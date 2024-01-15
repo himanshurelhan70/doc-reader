@@ -337,8 +337,8 @@ exports.createInterface = (req, res) => {
                     headerRow += onlyVat.toFixed(5).replace('.', '').padStart(18, ' ');
 
                     // prime amounts i.e PA = BA if currency is MUR
+                    headerRow += totalIncVat.toFixed(5).replace('.', '').padStart(18, ' ');
                     headerRow += onlyTicketAmount.padStart(18, ' ');
-                    headerRow += totalExcVat.toFixed(5).replace('.', '').padStart(18, ' ');
                     headerRow += onlyVat.toFixed(5).replace('.', '').padStart(18, ' ');
 
                     // posting Period
