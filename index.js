@@ -111,7 +111,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
         // Fair and currency
         const K_start = data.lastIndexOf("K-");
         const K_end = data.indexOf("\n", K_start);
-        let Fair = data.substring(K_start+2, K_end).trim();
+        let Fair = data.substring(K_start, K_end).trim();
         console.log("fair", Fair);
 
         function extractBaseFareAndCurrency(inputString) {
