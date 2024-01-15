@@ -23,9 +23,12 @@ exports.createInterface = (req, res) => {
         let totalIncVat = 0;
         let totalExcVat = 0;
         let onlyVat = 0;
+        let onlyTicketAmount = 0;
+        //
         let headerRow = "";
         let detailRows = "";
         let doubleEntry = "";
+        //
         let lineNo = 0;
         let headerVatCode = "ZER";
 
@@ -91,6 +94,10 @@ exports.createInterface = (req, res) => {
             totalIncVat += product.net_total === 0 ? 0 : product.net_total;
             totalExcVat += product.total_after_discount === 0 ? 0 : product.total_after_discount;
             onlyVat += product.Tax === 0 ? 0 : product.Tax;
+
+            if(product?.product?.id == "5810070000000494011"){
+                onlyTicketAmount = exclVat;
+            }
 
 
             ////////For prime amounts
@@ -330,7 +337,7 @@ exports.createInterface = (req, res) => {
                     headerRow += onlyVat.toFixed(5).replace('.', '').padStart(18, ' ');
 
                     // prime amounts i.e PA = BA if currency is MUR
-                    headerRow += totalIncVat.toFixed(5).replace('.', '').padStart(18, ' ');
+                    headerRow += onlyTicketAmount.padStart(18, ' ');
                     headerRow += totalExcVat.toFixed(5).replace('.', '').padStart(18, ' ');
                     headerRow += onlyVat.toFixed(5).replace('.', '').padStart(18, ' ');
 
