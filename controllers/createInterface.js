@@ -361,6 +361,11 @@ exports.createInterface = (req, res) => {
                 headerRow = "";
                 detailRows = "";
                 doubleEntry = "";
+                /////
+                totalIncVat = 0;
+                totalExcVat = 0;
+                onlyVat = 0;
+                /////
                 lineNo++;
                 headerVatCode = "ZER";
             }
