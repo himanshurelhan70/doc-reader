@@ -352,7 +352,7 @@ exports.createInterface = (req, res) => {
                     headerRow += (invoice.Credit_Note ? "Credit Note" : "Invoice").padEnd(15, ' ');
 
                     // Currency - MUR
-                    headerRow += "MUR".padEnd(10, ' ');
+                    headerRow += "MUR";
 
                     // Currency Rate
                     headerRow += "100000".padStart(18, ' ');
