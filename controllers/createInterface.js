@@ -53,7 +53,9 @@ exports.createInterface = (req, res) => {
             detailRows += lineNo.toString().padStart(4, ' ');
 
             // Line Description -
-            const lineDescription = invoice.Product_Details[2].product_description ? invoice.Product_Details[2].product_description.padEnd(30, ' ') : "".padEnd(30, ' ');
+            const proDesc = invoice.Product_Details[index].product_description ? invoice.Product_Details[index].product_description : "";
+            console.log("proDesc -->", proDesc);
+            const lineDescription = proDesc.match(/(\d+)$/) ? proDesc.match(/(\d+)$/)[1].padEnd(30, ' ') : "".padEnd(30, ' ');
             detailRows += lineDescription;
 
             // /////////// Finding GL codes of the current product
@@ -156,7 +158,9 @@ exports.createInterface = (req, res) => {
                 detailRows += lineNo.toString().padStart(4, ' ');;
 
                 // Line Description 
-                const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
+                const proDesc = invoice.Product_Details[index].product_description ? invoice.Product_Details[index].product_description : "";
+                console.log("proDesc -->", proDesc);
+                const lineDescription = proDesc.match(/(\d+)$/) ? proDesc.match(/(\d+)$/)[1].padEnd(30, ' ') : "".padEnd(30, ' ');
                 detailRows += lineDescription;
 
                 // /////////// Finding GL codes of the current product
@@ -241,7 +245,9 @@ exports.createInterface = (req, res) => {
                     doubleEntry += lineNo.toString().padStart(4, ' ');
 
                     // Line Description 
-                    const lineDescription = invoice.Product_Details[2].product_description.padEnd(30, ' ');
+                    const proDesc = invoice.Product_Details[index].product_description ? invoice.Product_Details[index].product_description : "";
+                    console.log("proDesc -->", proDesc);
+                    const lineDescription = proDesc.match(/(\d+)$/) ? proDesc.match(/(\d+)$/)[1].padEnd(30, ' ') : "".padEnd(30, ' ');
                     doubleEntry += lineDescription;
 
                     // /////////// Finding GL codes of the current product
