@@ -321,7 +321,7 @@ exports.createInterface = (req, res) => {
                     headerRow += "TL";
 
                     // customer code - todo
-                    const customerCode = "".padEnd(20, ' ');
+                    const customerCode = invoice.Customer_Code ? invoice.Customer_Code.padEnd(20, ' ') :  "".padEnd(20, ' ');
                     headerRow += customerCode;
 
                     // transaction Type
