@@ -31,6 +31,7 @@ exports.createInterface = (req, res) => {
         //
         let lineNo = 0;
         let headerVatCode = "ZER";
+        let refNo = 0;
 
         ////////////// Detail Row
         invoice.Product_Details.forEach((product, index, products) => {
@@ -46,7 +47,10 @@ exports.createInterface = (req, res) => {
             detailRows += isCreditNote ? "CR" : "IN";
 
             // Item Reference
-            const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+            const invRef = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+            const invArr = invRef.split("");
+            invArr[3] = refNo;
+            const invoiceReference = invArr.join("");
             detailRows += invoiceReference;
 
             // Line no 
@@ -151,7 +155,10 @@ exports.createInterface = (req, res) => {
                 detailRows += isCreditNote ? "CR" : "IN";
 
                 // Item Reference
-                const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+                const invRef = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+                const invArr = invRef.split("");
+                invArr[3] = refNo;
+                const invoiceReference = invArr.join("");
                 detailRows += invoiceReference;
 
                 // Line no
@@ -238,7 +245,10 @@ exports.createInterface = (req, res) => {
                     doubleEntry += isCreditNote ? "CR" : "IN";
 
                     // Item Reference
-                    const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+                    const invRef = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+                    const invArr = invRef.split("");
+                    invArr[3] = refNo;
+                    const invoiceReference = invArr.join("");
                     doubleEntry += invoiceReference;
 
                     // Line no 
@@ -319,7 +329,10 @@ exports.createInterface = (req, res) => {
                     headerRow += isCreditNote ? "CR" : "IN";
 
                     // Item Reference - ticket number - todo make it 7 ch in zoho
-                    const invoiceReference = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+                    const invRef = invoice.Invoice_Reference ? invoice.Invoice_Reference : "".padEnd(8, ' ');
+                    const invArr = invRef.split("");
+                    invArr[3] = refNo;
+                    const invoiceReference = invArr.join("");
                     headerRow += invoiceReference;
 
                     //Reason Code
@@ -381,6 +394,8 @@ exports.createInterface = (req, res) => {
                 /////
                 lineNo++;
                 headerVatCode = "ZER";
+                refNo++;
+              
             }
         })
     });

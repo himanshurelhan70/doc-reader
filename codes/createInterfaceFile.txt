@@ -3,44 +3,112 @@ startDate = record.get("Start_Date").toDate();
 endDate = record.get("End_Date").toDate();
 info "startDate -->" + startDate;
 info "endDate -->" + endDate;
-// ///
+fileName = "interface_file";
+// get day
+startDay = startDate.day();
+if(startDay < 10)
+{
+	fileName = fileName + "_0" + startDay + "_to";
+}
+else
+{
+	// Number is 10 or greater, no leading zero needed
+	fileName = fileName + "_" + startDay + "_to";
+}
+//////////////
+endDay = endDate.day();
+if(endDay < 10)
+{
+	fileName = fileName + "_0" + endDay + "_";
+}
+else
+{
+	// Number is 10 or greater, no leading zero needed
+	fileName = fileName + "_" + endDay + "_";
+}
+////////////////////// get month
+startMonth = startDate.month();
+months = {'jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'};
+fileName = fileName + months.get(startMonth - 1) + "_";
+// ////////// get year
+year = startDate.getYear().substring(2);
+fileName = fileName + year + ".TXT";
+info "fileName --> " + fileName;
+// //////// filtering Invoices acc. to Date
 filteredInvoice = List();
 invoices = zoho.crm.getRecords("Invoices");
-//
+/////////
 for each  invoice in invoices
 {
 	invoiceDate = invoice.get("Created_Time").toDate();
-	//
-	// 	info invoice;
+	///////
 	if(invoiceDate >= startDate && invoiceDate <= endDate)
 	{
-		products = invoice.get("Product_Details");
-		finalProducts = List();
-		///
-		for each  product in products
-		{
-			newMap = Map();
-			productId = product.get("product").get("id");
-			productDetails = zoho.crm.getRecordById("Products",productId);
-			newMap.put("Product_Name",productDetails.get("Product_Name"));
-			newMap.put("General_Ledger_Account_Code",productDetails.get("General_Ledger_Account_Code"));
-			newMap.put("GL_Analysis_Code_Level_8",productDetails.get("GL_Analysis_Code_Level_8"));
-			newMap.put("GL_Analysis_Code_Level_9",productDetails.get("GL_Analysis_Code_Level_9"));
-			finalProducts.add(newMap);
-		}
-		invoice.put("finalProducts",finalProducts);
-// 		info "invoice" + invoice;
 		filteredInvoice.add(invoice);
 	}
 	else
 	{
-		info "Invoice is not in selected range";
+		///// 		info "Invoice is not in selected range";
 	}
 }
-info "filteredInvoice -->" + filteredInvoice;
+////// info "filteredInvoice -->" + filteredInvoice;
+///////////////
+//////////////// 
+//////////////// Get details of the projects
 products = zoho.crm.getRecords("Products");
-// info "products -->" + products;
-//// resp = zoho.crm.getRecordById("Invoices","5810070000001418225");
-//// info "response ==" + resp;
-//// info "invoice items ==" + resp.get("invoicea_item");
-return "Successfully Generated Interface File";
+productsInfo = List();
+for each  product in products
+{
+	// 	/////info "product ->" + product;
+	newMap = Map();
+	newMap.put("id",product.get("id"));
+	newMap.put("Product_Name",product.get("Product_Name"));
+	newMap.put("General_Ledger_Account_Code",product.get("General_Ledger_Account_Code"));
+	newMap.put("GL_Analysis_Code_Level_7",product.get("GL_Analysis_Code_Level_7"));
+	newMap.put("GL_Analysis_Code_Level_8",product.get("GL_Analysis_Code_Level_8"));
+	newMap.put("GL_Analysis_Code_Level_9",product.get("GL_Analysis_Code_Level_9"));
+	newMap.put("Tax_Code",product.get("Tax_Code"));
+	productsInfo.add(newMap);
+}
+// info "products -->" + productsInfo;
+// ///////////
+finalData = Map();
+finalData.put("filteredInvoice",filteredInvoice);
+finalData.put("productsInfo",productsInfo);
+info "finalData ---> " + finalData;
+////
+//////////////////
+////////////////// Calling Backend to create Interface File
+url = "https://doc-reader-v3rr.onrender.com/createInterface";
+headers = Map();
+headers.put("Content-Type","application/json");
+// Convert the data map to a JSON string
+body = finalData.toString();
+// Make the HTTP POST request
+fileData = postUrl(url,body,headers);
+//// convert text into File
+newFile = fileData.toFile("Interface.txt");
+info "isFile" + isFile(newFile);
+// info "fileData ->" + fileData;
+//////////////////////////////////////////file upload
+/////////////
+response = zoho.workdrive.uploadFile(newFile,"n1smseed45b9be3114fbe8687003a8916b595",fileName,false,"wd");
+/////////////
+// Check the response;
+if(isNull(response.get("errors")))
+{
+	// Request was successful
+	info "response" + response;
+	fileId = response.get("data").get(0).get("attributes").get("resource_id");
+	//
+	updatedData = {"Workdrive_URL":"https://download.zoho.com/v1/workdrive/download/" + fileId};
+	updatedRecord = zoho.crm.updateRecord("Custom",customId,updatedData);
+	info "updatedRecord" + updatedRecord;
+	return "Successfully Generated Interface File";
+}
+else
+{
+	info "Error while creating interface File";
+	return "Error while creating interface File";
+}
+////
