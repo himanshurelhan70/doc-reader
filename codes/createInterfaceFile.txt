@@ -41,9 +41,26 @@ invoices = zoho.crm.getRecords("Invoices");
 for each  invoice in invoices
 {
 	invoiceDate = invoice.get("Created_Time").toDate();
+	AZM_Export = ifNull(invoice.get("AZM_Export"),false);
 	///////
-	if(invoiceDate >= startDate && invoiceDate <= endDate)
+	if(invoiceDate >= startDate && invoiceDate <= endDate && !AZM_Export)
 	{
+		// 		//////
+		linkedAcc = ifNULL(invoice.get("Account_Name"),false);
+		linkedCon = ifNULL(invoice.get("Contact_Name"),false);
+		Customer_Code = "";
+		if(linkedAcc)
+		{
+			res = zoho.crm.getRecordById("Accounts",linkedAcc.get("id"));
+			Customer_Code = res.get("Customer_Code");
+		}
+		else if(linkedCon)
+		{
+			res = zoho.crm.getRecordById("Contacts",linkedCon.get("id"));
+			Customer_Code = res.get("Customer_Code");
+		}
+		info "Customer_Code ->" + Customer_Code;
+		invoice.put("Customer_Code",Customer_Code);
 		filteredInvoice.add(invoice);
 	}
 	else
@@ -51,7 +68,7 @@ for each  invoice in invoices
 		///// 		info "Invoice is not in selected range";
 	}
 }
-////// info "filteredInvoice -->" + filteredInvoice;
+info "filteredInvoice -->" + filteredInvoice;
 ///////////////
 //////////////// 
 //////////////// Get details of the projects
@@ -103,6 +120,15 @@ if(isNull(response.get("errors")))
 	//
 	updatedData = {"Workdrive_URL":"https://download.zoho.com/v1/workdrive/download/" + fileId};
 	updatedRecord = zoho.crm.updateRecord("Custom",customId,updatedData);
+	/////
+	//// updating each Invoice with azm lookup
+	for each  invoice in filteredInvoice
+	{
+		invoiceID = invoice.get("id");
+		updatedInvoices = zoho.crm.updateRecord("Invoices",invoiceID,{"AZM_Export": customId});
+		info "updatedInvoices ->" + updatedInvoices;
+	}
+	//////
 	info "updatedRecord" + updatedRecord;
 	return "Successfully Generated Interface File";
 }
