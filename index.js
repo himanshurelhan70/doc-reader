@@ -240,9 +240,11 @@ app.post("/uploadFile/:fileId", async (req, res) => {
 
         const matches = [...data.matchAll(regex)];
 
+        console.log("matches ", matches);
+
         if (matches.length > 0) {
             // Get the second matched group and store in an array
-            const hLines = matches.map(match => match[2].trim());
+            const hLines = matches.map(match => match[0].trim());
 
             const H = [];
             let Class = "";
@@ -250,12 +252,15 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             console.log("hines", hLines);
 
             hLines.forEach(element => {
+                // row for flight routing subform
+                let flightRouting = {};
 
+                // ////
                 hArr = element.split(";");
 
                 // Routing
-                const r1 = hArr[0].substring(4);
-                const r2 = hArr[2].trim();
+                const r1 = hArr[1].substring(4);
+                const r2 = hArr[3].trim();
 
                 if (!(Routing[Routing.length - 1] == r1)) {
                     Routing.push(r1);
@@ -271,17 +276,84 @@ app.post("/uploadFile/:fileId", async (req, res) => {
                 console.log("Class of booking ---->", Class);
 
 
-                // const hData = {
-                //     h1: hArr[0].trim(),
-                //     h2: hArr[1].trim(),
-                //     h3: hArr[2].trim(),
-                //     h4: hArr[3].trim(),
-                //     h5: hArr[4].trim(),
-                // }
+                // ! //////////////// tattooNumber 
+                let tattooNumber;
+                const tattooNumberArr = element.match(/H-(\d{3});/);
 
-                const hData = hArr.join("\n");
+                if (tattooNumberArr) {
+                    tattooNumber = tattooNumberArr[1];
+                    console.log("tattooNumber => ", tattooNumber);
+                } else {
+                    tattooNumber = "undefined";
+                    console.log("tattooNumber not found.");
+                }
 
-                H.push(hData);
+                flightRouting.tattooNumber = tattooNumber;
+
+                console.log("flightRouting", flightRouting);
+
+                // ! //////////////// segmentNumber|stopOverId|originAirportCode
+                const SSO = hArr[1];
+                console.log("SSO =>", SSO);
+                flightRouting.SSO = SSO;
+
+
+                // ! /////////////// origin city name
+                const originCityName = hArr[2].trim();
+                flightRouting.originCityName = originCityName;
+
+                // ! /////////////// destination airport code
+                const destinationAirportCode = hArr[3];
+                flightRouting.destinationAirportCode = destinationAirportCode;
+
+                // ! /////////////////// destination city name
+                const destinationCityName = hArr[4];
+                flightRouting.destinationCityName = destinationCityName.trim();
+
+                // ! /////////////// Multiple Fields
+                const codeClassDate = hArr[5];
+                const codeClassDateArr = codeClassDate.split(/\s+/).filter(Boolean);
+                console.log("codeClassDateArr", codeClassDateArr);
+
+                console.log("codeClassDateArr", codeClassDateArr);
+
+                // ! /////////////// Airline Code + Flight Number
+                const [airlineCode, flightNumber] = codeClassDateArr;
+                const airlineCodeFlightNumber = `${airlineCode} ${flightNumber}`;
+                flightRouting.airlineCodeFlightNumber = airlineCodeFlightNumber;
+
+                // ! ////////////// Class of Service
+                const classOfService = codeClassDateArr[2];
+                flightRouting.classOfService = classOfService;
+
+                // ! ////////////// Class of Booking
+                const classOfBooking = codeClassDateArr[3];
+                flightRouting.classOfBooking = classOfBooking;
+
+                // ! ///////////// Departure Date/Time
+                const departureDateTime = codeClassDateArr[4];
+                flightRouting.departureDateTime = departureDateTime;
+
+                // ! ///////////// Arrival Date/Time
+                const arrivalDateTime = codeClassDateArr[5];
+                flightRouting.arrivalDateTime = `${codeClassDateArr[6]}${codeClassDateArr[5]}`;
+
+                // ! //////////// Meal Code
+                const mealCode = hArr[8];
+                flightRouting.mealCode = mealCode;
+
+                // ! //////////// Number Of Stops
+                const numberOfStops = hArr[9];
+                flightRouting.numberOfStops = numberOfStops;
+
+                // ! //////////// Equipment Type
+                const equipmentType = hArr[10];
+                flightRouting.equipmentType = equipmentType;
+                
+
+
+                // appending object/row in flight routing subform
+                H.push(flightRouting);
             });
 
             Routing = Routing.join("/");
