@@ -249,9 +249,9 @@ app.post("/uploadFile/:fileId", async (req, res) => {
             const H = [];
             let Class = "";
 
-            console.log("hines", hLines);
+            console.log("hineshineshineshineshineshineshineshineshineshines", hLines);
 
-            hLines.forEach(element => {
+            hLines.forEach(async element => {
                 // row for flight routing subform
                 let flightRouting = {};
 
@@ -315,7 +315,6 @@ app.post("/uploadFile/:fileId", async (req, res) => {
                 const codeClassDateArr = codeClassDate.split(/\s+/).filter(Boolean);
                 console.log("codeClassDateArr", codeClassDateArr);
 
-                console.log("codeClassDateArr", codeClassDateArr);
 
                 // ! /////////////// Airline Code + Flight Number
                 const [airlineCode, flightNumber] = codeClassDateArr;
@@ -350,8 +349,43 @@ app.post("/uploadFile/:fileId", async (req, res) => {
                 const equipmentType = hArr[10];
                 flightRouting.equipmentType = equipmentType;
                 
+                const entertainmentCode=hArr[11];
+                flightRouting.entertainmentCode = entertainmentCode;
 
+                const sharedDesignatorCommuter=hArr[12];
+                flightRouting.sharedDesignatorCommuter = sharedDesignatorCommuter;
 
+                const baggageAllowance=hArr[13];
+                flightRouting.baggageAllowance = baggageAllowance;
+                
+                var checkInTerminal=hArr[14]?.match(/(\d+)/);
+               
+                flightRouting.checkInTerminal = checkInTerminal?checkInTerminal[0]:"";
+
+                const latestCheckInTime=hArr[15];
+                flightRouting.latestCheckInTime = latestCheckInTime;
+
+                const ElectronicTicketSegmentIndicator=hArr[16];
+                flightRouting.ElectronicTicketSegmentIndicator = ElectronicTicketSegmentIndicator;
+                
+                const flightDurationTime=hArr[17];
+                flightRouting.flightDurationTime = flightDurationTime;
+               
+                const FlightNonsmokingIndicator=hArr[18];
+                flightRouting.FlightNonsmokingIndicator = FlightNonsmokingIndicator;
+                
+                const geographicalMileage=hArr[19];
+                flightRouting.geographicalMileage = geographicalMileage;
+               
+                const originCountryCode=hArr[20];
+                flightRouting.originCountryCode = originCountryCode;
+
+                const destinationCountryCode=hArr[21];
+                flightRouting.destinationCountryCode = destinationCountryCode;
+
+                const arrivalTerminal=hArr[22]?.match(/(\d+)/);
+                flightRouting.arrivalTerminal =arrivalTerminal? arrivalTerminal[0]:"";
+               
                 // appending object/row in flight routing subform
                 H.push(flightRouting);
             });
