@@ -294,10 +294,14 @@ app.post("/uploadFile/:fileId", async (req, res) => {
 
                 // ! //////////////// segmentNumber|stopOverId|originAirportCode
                 const SSO = hArr[1];
-                console.log("SSO =>", SSO);
+                console.log("SSO =>", SSO?.substring(0,2));
+                console.log("SSO =>", SSO?.substring(2,4));
+                console.log("SSO =>", SSO?.substring(4,7));
+               console.log(res,"result");
                 flightRouting.SSO = SSO;
-
-
+                flightRouting.SS0segmentNumber= SSO?.substring(0,2);
+                flightRouting.SS0stopOverId= SSO?.substring(2,4);
+                flightRouting.SS0originAirportCode= SSO?.substring(4,7);
                 // ! /////////////// origin city name
                 const originCityName = hArr[2].trim();
                 flightRouting.originCityName = originCityName;
@@ -339,7 +343,7 @@ app.post("/uploadFile/:fileId", async (req, res) => {
 
                 // ! //////////// Meal Code
                 const mealCode = hArr[8];
-                flightRouting.mealCode = mealCode;
+                flightRouting.mealCode = mealCode.trim();
 
                 // ! //////////// Number Of Stops
                 const numberOfStops = hArr[9];
@@ -420,9 +424,6 @@ app.post("/uploadFile/:fileId", async (req, res) => {
 /////////////////////
 
 app.post("/createInterface", createInterface);
-
-
-
 
 app.listen(PORT, () => {
     console.log('server is running');
